@@ -3,7 +3,6 @@ import { garamond, inter, italianno } from "@/lib/fonts";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
-import SvgSprite from "@/components/ui/SvgSprite";
 import "./globals.css";
 
 const SITE = "https://cosmyastral.com";
@@ -107,7 +106,6 @@ export default function RootLayout({
       className={`${garamond.variable} ${inter.variable} ${italianno.variable}`}
     >
       <body>
-        <SvgSprite />
         <JsonLd data={websiteSchema} />
         <JsonLd data={organizationSchema} />
         <Nav />

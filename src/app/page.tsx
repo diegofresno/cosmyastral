@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/seo/JsonLd';
+import { WheelSvg, SunSvg, MoonSvg, StarSvg, OrnamentSvg } from '@/components/ui/Icons';
 
 export const metadata: Metadata = {
   title: 'Cosmyastral · Carta natal y numerología narradas con cuidado',
@@ -49,14 +50,12 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section className="hero">
-        <svg className="hero__wheel" aria-hidden="true">
-          <use href="#wheel"/>
-        </svg>
+        <WheelSvg className="hero__wheel" aria-hidden={true} />
         <div className="hero__content">
           <div className="hero__ornament">
-            <svg viewBox="0 0 120 20"><use href="#ornament"/></svg>
+            <OrnamentSvg />
             <span>Swiss Ephemeris · Interpretación supervisada · España y LATAM</span>
-            <svg viewBox="0 0 120 20"><use href="#ornament"/></svg>
+            <OrnamentSvg />
           </div>
           <h1 className="hero__title">
             <span className="hero__pre">Lo que el cielo escribió</span>
@@ -78,15 +77,15 @@ export default function HomePage() {
           </div>
           <div className="hero__meta">
             <div>
-              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+              <SunSvg />
               <span>Swiss Ephemeris — precisión de segundos de arco</span>
             </div>
             <div>
-              <svg viewBox="0 0 100 100"><use href="#moon"/></svg>
+              <MoonSvg />
               <span>Revisión humana en cada estudio</span>
             </div>
             <div>
-              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+              <StarSvg />
               <span>52 — 140 páginas de lectura personalizada</span>
             </div>
           </div>
@@ -118,7 +117,7 @@ export default function HomePage() {
         <div className="calc__inner">
           <div className="section-head">
             <div className="ornament-line">
-              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+              <StarSvg />
             </div>
             <span className="eyebrow">I · Empieza por aquí</span>
             <h2>Tu carta natal, en treinta segundos.</h2>
@@ -161,7 +160,7 @@ export default function HomePage() {
       <section className="products" id="estudios">
         <div className="section-head">
           <div className="ornament-line">
-            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            <StarSvg />
           </div>
           <span className="eyebrow">II · Estudios premium</span>
           <h2>Tres formas de leerte por dentro.</h2>
@@ -173,7 +172,7 @@ export default function HomePage() {
         <div className="products__grid">
           <article className="product">
             <div className="product__icon">
-              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+              <StarSvg />
             </div>
             <span className="product__type">Numerología pitagórica</span>
             <h3>Estudio Numerológico</h3>
@@ -198,7 +197,7 @@ export default function HomePage() {
           <article className="product product--featured">
             <span className="product__badge">★ El más pedido</span>
             <div className="product__icon">
-              <svg viewBox="0 0 200 200"><use href="#wheel"/></svg>
+              <WheelSvg />
             </div>
             <span className="product__type">Pack completo</span>
             <h3>Carta Natal + Numerología</h3>
@@ -222,7 +221,7 @@ export default function HomePage() {
 
           <article className="product">
             <div className="product__icon">
-              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+              <SunSvg />
             </div>
             <span className="product__type">Astrología psicológica</span>
             <h3>Carta Natal Interpretada</h3>
@@ -250,7 +249,7 @@ export default function HomePage() {
       <section className="method" id="metodo">
         <div className="section-head">
           <div className="ornament-line">
-            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            <StarSvg />
           </div>
           <span className="eyebrow">III · El proceso</span>
           <h2>Cuatro pasos desde tus datos hasta tu correo.</h2>
@@ -259,7 +258,7 @@ export default function HomePage() {
         <div className="method__grid">
           <article className="step">
             <div className="step__icon">
-              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+              <SunSvg />
             </div>
             <span className="step__num">Paso 01</span>
             <h3>Cálculos astronómicos exactos</h3>
@@ -270,7 +269,7 @@ export default function HomePage() {
           </article>
           <article className="step">
             <div className="step__icon">
-              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+              <StarSvg />
             </div>
             <span className="step__num">Paso 02</span>
             <h3>Interpretación narrativa</h3>
@@ -281,7 +280,7 @@ export default function HomePage() {
           </article>
           <article className="step">
             <div className="step__icon">
-              <svg viewBox="0 0 100 100"><use href="#moon"/></svg>
+              <MoonSvg />
             </div>
             <span className="step__num">Paso 03</span>
             <h3>Supervisión humana</h3>
@@ -292,7 +291,7 @@ export default function HomePage() {
           </article>
           <article className="step">
             <div className="step__icon">
-              <svg viewBox="0 0 200 200"><use href="#wheel"/></svg>
+              <WheelSvg />
             </div>
             <span className="step__num">Paso 04</span>
             <h3>Entrega y propiedad</h3>
@@ -308,7 +307,7 @@ export default function HomePage() {
       <section className="quotes">
         <div className="section-head">
           <div className="ornament-line">
-            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            <StarSvg />
           </div>
           <span className="eyebrow">IV · Lo que dicen</span>
           <h2>Catorce primeras lectoras nos escribieron esto.</h2>
@@ -349,7 +348,7 @@ export default function HomePage() {
       <section className="faq">
         <div className="section-head">
           <div className="ornament-line">
-            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            <StarSvg />
           </div>
           <span className="eyebrow">VI · Preguntas frecuentes</span>
           <h2>Lo que nos preguntáis a menudo.</h2>
@@ -367,9 +366,7 @@ export default function HomePage() {
       {/* ── CTA FINAL ── */}
       <section className="cta-final">
         <div className="cta-final__inner">
-          <svg className="cta-final__wheel" aria-hidden="true">
-            <use href="#wheel"/>
-          </svg>
+          <WheelSvg className="cta-final__wheel" aria-hidden={true} />
           <h2>¿Empezamos por algo gratis?</h2>
           <p>
             Tu carta natal calculada con precisión astronómica, sin pagar, sin registro.
