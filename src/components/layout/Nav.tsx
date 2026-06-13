@@ -107,9 +107,8 @@ export default function Nav() {
 
           {/* Burger */}
           <button
-            className="md:hidden"
+            className="flex md:hidden"
             style={{
-              display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',

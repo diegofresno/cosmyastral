@@ -4,67 +4,31 @@ import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Cosmyastral · Carta natal y numerología narradas con cuidado',
+  description:
+    'Calculadora de carta natal gratuita y estudios personalizados de astrología y numerología. Cálculo con Swiss Ephemeris, interpretación narrativa con revisión humana en cada entrega.',
   alternates: { canonical: '/' },
 };
 
-const FEATURES = [
-  {
-    icon: '☽',
-    title: 'Carta natal completa',
-    body: 'Sol, Luna, Ascendente y los 10 planetas con sus casas y aspectos. Narrativa de 10.000+ palabras.',
-    href: '/carta-natal/',
-    cta: 'Calcular gratis',
-  },
-  {
-    icon: '✦',
-    title: 'Numerología personal',
-    body: 'Camino de vida, expresión, alma y destino según la numerología pitagórica clásica.',
-    href: '/numerologia/',
-    cta: 'Descubrir tus números',
-  },
-  {
-    icon: '↑',
-    title: 'Signo ascendente',
-    body: 'El punto exacto del zodíaco que salía por el horizonte cuando naciste. Cambia cada dos horas.',
-    href: '/ascendente/',
-    cta: 'Calcular ascendente',
-  },
-];
-
-const HOW_IT_WORKS = [
-  {
-    step: '01',
-    title: 'Introduces tu fecha, hora y lugar de nacimiento',
-    body: 'Solo esos tres datos. El lugar se geolocaliza con coordenadas precisas para calcular el Ascendente y las casas.',
-  },
-  {
-    step: '02',
-    title: 'Swiss Ephemeris calcula las posiciones planetarias',
-    body: 'La misma librería astronómica que usan los software de astrología profesional. Exactitud de segundos de arco.',
-  },
-  {
-    step: '03',
-    title: 'Recibes tu estudio en PDF con interpretación narrativa',
-    body: 'No tablas ni listas. Una lectura continua, escrita para ti, de 10.000 a 15.000 palabras.',
-  },
-];
-
 const FAQS = [
   {
-    q: '¿Es realmente gratis la calculadora?',
-    a: 'Sí. La calculadora y el resumen básico son completamente gratuitos. Los estudios completos en PDF son de pago.',
+    q: '¿Necesito saber la hora exacta de mi nacimiento?',
+    a: 'Para la carta natal sí: el Ascendente y las casas astrológicas dependen de la hora con bastante precisión. Si no la sabes, calculamos el estudio omitiendo casas y Ascendente, indicándolo. La numerología no necesita la hora.',
   },
   {
-    q: '¿Con qué precisión se calculan las posiciones?',
-    a: 'Usamos Swiss Ephemeris, el estándar astronómico de la astrología profesional. Solo necesitas la hora con un margen de ±10 minutos para tener el Ascendente correcto.',
+    q: '¿Cuánto tarda en llegar mi estudio?',
+    a: 'Entre 24 y 48 horas. Cada documento pasa por revisión humana antes del envío. Llega en PDF a tu correo, sin marcas de agua.',
   },
   {
-    q: '¿Qué incluye el estudio premium?',
-    a: 'Entre 10.000 y 15.000 palabras interpretando tu carta natal completa: Big Three, planetas personales, casas, aspectos clave, Quirón, Nodos lunares y síntesis final. En PDF descargable.',
+    q: '¿En qué se diferencia de las cartas natales gratuitas que hay por internet?',
+    a: 'Las gratuitas te dan datos crudos: "Sol en Tauro, casa 7". Nuestros estudios convierten esos datos en una lectura narrativa de 50–70 páginas, escrita en lenguaje claro, sobre quién eres tú concretamente.',
   },
   {
-    q: '¿Cuánto tarda en llegar el PDF?',
-    a: 'Menos de 10 minutos tras el pago. Lo recibes en tu correo y queda disponible en tu cuenta.',
+    q: '¿Sirve si vivo en LATAM?',
+    a: 'Sí. Calculamos correctamente cualquier ciudad del mundo con su zona horaria histórica. Tenemos precios adaptados para Argentina, México, Colombia, Chile y resto de LATAM — un 50% más bajos que España.',
+  },
+  {
+    q: '¿Y si no me convence?',
+    a: 'En los primeros siete días, si nos escribes contándonos qué no te ha encajado, te devolvemos el dinero. Sin formularios, sin preguntas.',
   },
 ];
 
@@ -74,10 +38,7 @@ const faqSchema = {
   mainEntity: FAQS.map(({ q, a }) => ({
     '@type': 'Question',
     name: q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: a,
-    },
+    acceptedAnswer: { '@type': 'Answer', text: a },
   })),
 };
 
@@ -85,449 +46,337 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema} />
+
       {/* ── HERO ── */}
-      <section
-        style={{
-          background: 'var(--bg)',
-          borderBottom: '1px solid var(--line)',
-          padding: 'clamp(80px, 10vw, 140px) 32px',
-          textAlign: 'center',
-        }}
-      >
-        <div style={{ maxWidth: '780px', margin: '0 auto' }}>
-          <p className="eyebrow">Astrología · Numerología · España y LATAM</p>
-          <h1
-            style={{
-              fontFamily: 'var(--font-garamond)',
-              fontWeight: 400,
-              fontSize: 'clamp(2.4rem, 5.5vw, 4.2rem)',
-              lineHeight: 1.12,
-              color: 'var(--ink)',
-              marginBottom: '28px',
-              letterSpacing: '-0.01em',
-            }}
-          >
-            Lo que el cielo escribió{' '}
-            <br />
-            el día que naciste,{' '}
-            <em style={{ color: 'var(--accent)' }}>narrado con cuidado.</em>
+      <section className="hero">
+        <svg className="hero__wheel" aria-hidden="true">
+          <use href="#wheel"/>
+        </svg>
+        <div className="hero__content">
+          <div className="hero__ornament">
+            <svg viewBox="0 0 120 20"><use href="#ornament"/></svg>
+            <span>Swiss Ephemeris · Interpretación supervisada · España y LATAM</span>
+            <svg viewBox="0 0 120 20"><use href="#ornament"/></svg>
+          </div>
+          <h1 className="hero__title">
+            <span className="hero__pre">Lo que el cielo escribió</span>
+            <span className="hero__main">el día que naciste,</span>
+            <span className="hero__post"><em>narrado con cuidado.</em></span>
           </h1>
-          <p
-            style={{
-              fontFamily: 'var(--font-garamond)',
-              fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
-              color: 'var(--ink-soft)',
-              lineHeight: 1.65,
-              marginBottom: '44px',
-              maxWidth: '600px',
-              margin: '0 auto 44px',
-            }}
-          >
-            Calculadora gratuita de carta natal y numerología. Estudios
-            personalizados en PDF con cálculo astronómico profesional e
-            interpretación narrativa.
+          <p className="hero__lead">
+            Calculamos tu carta natal con la misma precisión astronómica que usan los observatorios.
+            Después la traducimos a un estudio narrado de sesenta páginas, con revisión humana
+            antes de cada entrega. Sin esoterismo vacío, sin frases prefabricadas.
           </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/carta-natal/" className="btn btn-accent btn-xl">
-              Calcular mi carta natal gratis →
+          <div className="hero__ctas">
+            <Link href="/carta-natal/" className="btn btn-accent btn-lg">
+              Calcular mi carta natal gratis
             </Link>
-            <Link href="/precios/" className="btn btn-ghost btn-xl">
-              Ver estudios PDF
+            <Link href="/precios/" className="btn btn-ghost btn-lg">
+              Ver estudios premium
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* ── CALCULATOR PREVIEW ── */}
-      <section style={{ background: 'var(--bg-warm)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: '680px', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Calculadora gratuita</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-                lineHeight: 1.2,
-              }}
-            >
-              Empieza ahora. Solo tres datos.
-            </h2>
-          </div>
-
-          {/* Form mock */}
-          <div
-            style={{
-              background: 'var(--bg)',
-              border: '1px solid var(--line)',
-              borderRadius: '8px',
-              padding: '36px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-            }}
-          >
-            <div style={{ display: 'grid', gap: '12px', gridTemplateColumns: '1fr 1fr' }}>
-              <label style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.78rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink-mute)' }}>Fecha de nacimiento</span>
-                <input
-                  type="date"
-                  disabled
-                  placeholder="DD/MM/AAAA"
-                  style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', padding: '11px 14px', border: '1px solid var(--line)', borderRadius: '4px', background: 'var(--bg)', color: 'var(--ink-soft)', cursor: 'not-allowed', opacity: 0.7 }}
-                />
-              </label>
-              <label style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.78rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink-mute)' }}>Hora de nacimiento</span>
-                <input
-                  type="time"
-                  disabled
-                  placeholder="HH:MM"
-                  style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', padding: '11px 14px', border: '1px solid var(--line)', borderRadius: '4px', background: 'var(--bg)', color: 'var(--ink-soft)', cursor: 'not-allowed', opacity: 0.7 }}
-                />
-              </label>
+          <div className="hero__meta">
+            <div>
+              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+              <span>Swiss Ephemeris — precisión de segundos de arco</span>
             </div>
-            <label style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.78rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink-mute)' }}>Ciudad de nacimiento</span>
-              <input
-                type="text"
-                disabled
-                placeholder="p.ej. Madrid, España"
-                style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', padding: '11px 14px', border: '1px solid var(--line)', borderRadius: '4px', background: 'var(--bg)', color: 'var(--ink-soft)', cursor: 'not-allowed', opacity: 0.7 }}
-              />
-            </label>
-            <Link href="/carta-natal/" className="btn btn-accent btn-block" style={{ textAlign: 'center' }}>
-              Calcular carta natal gratis →
+            <div>
+              <svg viewBox="0 0 100 100"><use href="#moon"/></svg>
+              <span>Revisión humana en cada estudio</span>
+            </div>
+            <div>
+              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+              <span>52 — 140 páginas de lectura personalizada</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── HIGHLIGHTS ── */}
+      <div className="highlights">
+        <div className="highlight">
+          <div className="highlight__num">14</div>
+          <div className="highlight__label">Estudios entregados</div>
+        </div>
+        <div className="highlight">
+          <div className="highlight__num">50+</div>
+          <div className="highlight__label">Páginas por estudio</div>
+        </div>
+        <div className="highlight">
+          <div className="highlight__num">7</div>
+          <div className="highlight__label">Días de garantía</div>
+        </div>
+        <div className="highlight">
+          <div className="highlight__num">48h</div>
+          <div className="highlight__label">Tiempo de entrega</div>
+        </div>
+      </div>
+
+      {/* ── CALCULADORA ── */}
+      <section className="calc" id="calculadora">
+        <div className="calc__inner">
+          <div className="section-head">
+            <div className="ornament-line">
+              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            </div>
+            <span className="eyebrow">I · Empieza por aquí</span>
+            <h2>Tu carta natal, en treinta segundos.</h2>
+            <p className="lead">Gratis. Sin registro. Sin email. Los datos se borran al cerrar el navegador.</p>
+          </div>
+          <div className="calc__form">
+            <div className="calc__field">
+              <label htmlFor="calc-name">Tu nombre completo</label>
+              <input id="calc-name" type="text" placeholder="Lucía Martínez García" readOnly />
+              <span className="calc__hint">Lo usamos solo para personalizar tu carta.</span>
+            </div>
+            <div className="calc__row">
+              <div className="calc__field">
+                <label htmlFor="calc-date">Fecha de nacimiento</label>
+                <input id="calc-date" type="text" placeholder="DD / MM / AAAA" readOnly />
+              </div>
+              <div className="calc__field">
+                <label htmlFor="calc-time">Hora exacta</label>
+                <input id="calc-time" type="text" placeholder="HH : MM" readOnly />
+              </div>
+            </div>
+            <span className="calc__hint">Si no sabes la hora, dejaremos el Ascendente abierto.</span>
+            <div className="calc__field">
+              <label htmlFor="calc-place">Lugar de nacimiento</label>
+              <input id="calc-place" type="text" placeholder="Ciudad, país" readOnly />
+            </div>
+            <Link href="/carta-natal/" className="btn btn-accent btn-block btn-lg">
+              Calcular mi carta natal →
             </Link>
-            <p style={{ textAlign: 'center', fontFamily: 'var(--font-garamond)', fontSize: '0.9rem', color: 'var(--ink-mute)' }}>
-              Sin registro · Sin pago · Resultado inmediato
+            <p className="calc__legal">
+              Al continuar aceptas nuestra{' '}
+              <Link href="/privacidad/">política de privacidad</Link>.
+              No vendemos tus datos a nadie, nunca.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── FEATURES ── */}
-      <section style={{ background: 'var(--bg)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: 'var(--max)', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Herramientas</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-              }}
-            >
-              Todo lo que quieres saber sobre tu carta natal
-            </h2>
+      {/* ── PRODUCTS ── */}
+      <section className="products" id="estudios">
+        <div className="section-head">
+          <div className="ornament-line">
+            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
           </div>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '24px',
-            }}
-          >
-            {FEATURES.map(({ icon, title, body, href, cta }) => (
-              <div
-                key={href}
-                style={{
-                  background: 'var(--bg-warm)',
-                  border: '1px solid var(--line)',
-                  borderRadius: '8px',
-                  padding: '36px 28px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                }}
-              >
-                <span style={{ fontSize: '1.6rem', color: 'var(--gold)' }}>{icon}</span>
-                <h3 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.4rem', color: 'var(--ink)' }}>
-                  {title}
-                </h3>
-                <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)', lineHeight: 1.6, flex: 1 }}>
-                  {body}
-                </p>
-                <Link href={href} className="btn btn-outline btn-sm" style={{ alignSelf: 'flex-start' }}>
-                  {cta}
-                </Link>
-              </div>
-            ))}
-          </div>
+          <span className="eyebrow">II · Estudios premium</span>
+          <h2>Tres formas de leerte por dentro.</h2>
+          <p className="lead">
+            Documentos personalizados, escritos desde cero a partir de tus datos.
+            En PDF a tu correo, sin marcas de agua, tuyos para siempre.
+          </p>
         </div>
-      </section>
-
-      {/* ── PREMIUM ── */}
-      <section style={{ background: 'var(--bg-warm)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: 'var(--max)', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Estudios premium</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-                marginBottom: '16px',
-              }}
-            >
-              Más que un resumen: una lectura completa
-            </h2>
-            <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1.1rem', color: 'var(--ink-soft)', maxWidth: '600px', margin: '0 auto' }}>
-              Los estudios gratuitos te dan los datos. Los estudios premium te explican
-              qué significan para ti, con 10.000–15.000 palabras de interpretación narrativa.
+        <div className="products__grid">
+          <article className="product">
+            <div className="product__icon">
+              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            </div>
+            <span className="product__type">Numerología pitagórica</span>
+            <h3>Estudio Numerológico</h3>
+            <p className="product__desc">
+              Camino de Vida, Expresión, Alma, Personalidad, Destino. Ciclos vitales,
+              pináculos, año personal, lecciones kármicas. La lectura íntegra de tu nombre y tu fecha.
             </p>
-          </div>
+            <ul className="product__list">
+              <li>52 – 60 páginas</li>
+              <li>15.000 palabras de narrativa</li>
+              <li>PDF + versión web personal</li>
+            </ul>
+            <div className="product__foot">
+              <span className="product__price">
+                <span className="amt">19€</span>
+                <span className="cur">España · 9€ LATAM</span>
+              </span>
+              <Link href="/precios/" className="btn btn-ink btn-sm">Encargar</Link>
+            </div>
+          </article>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', maxWidth: '900px', margin: '0 auto' }}>
-            {[
-              { title: 'Numerología completa', price: '19 €', items: ['Camino de vida', 'Número de expresión', 'Alma y sombra', 'Ciclos y pináculos', 'Año personal'] },
-              { title: 'Carta natal interpretada', price: '29 €', items: ['Big Three', 'Planetas personales', 'Casas y aspectos', 'Quirón + Nodos', 'Síntesis narrativa'], featured: true },
-              { title: 'Pack completo', price: '39 €', items: ['Todo lo anterior', 'Diálogo astro-numerológico', 'PDF de 20.000+ palabras', 'Descarga inmediata', '—'] },
-            ].map(({ title, price, items, featured }) => (
-              <div
-                key={title}
-                style={{
-                  background: featured ? 'var(--accent)' : 'var(--bg)',
-                  border: `1px solid ${featured ? 'var(--accent)' : 'var(--line)'}`,
-                  borderRadius: '8px',
-                  padding: '32px 24px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '20px',
-                }}
-              >
-                <div>
-                  <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.72rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.12em', color: featured ? 'rgba(247,238,219,.6)' : 'var(--ink-mute)', marginBottom: '8px' }}>
-                    {title}
-                  </p>
-                  <p style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '2.2rem', color: featured ? 'var(--bg)' : 'var(--ink)', lineHeight: 1 }}>
-                    {price}
-                    <span style={{ fontSize: '1rem', fontWeight: 400, marginLeft: '4px', opacity: 0.7 }}>ES</span>
-                  </p>
-                </div>
-                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
-                  {items.map((item) => (
-                    <li key={item} style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: featured ? 'rgba(247,238,219,.85)' : 'var(--ink-soft)', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span style={{ color: featured ? 'var(--gold-soft)' : 'var(--gold)', fontSize: '0.8rem' }}>✦</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/precios/"
-                  className={`btn ${featured ? 'btn-gold' : 'btn-outline'}`}
-                  style={{ textAlign: 'center' }}
-                >
-                  Ver detalles
-                </Link>
-              </div>
-            ))}
-          </div>
+          <article className="product product--featured">
+            <span className="product__badge">★ El más pedido</span>
+            <div className="product__icon">
+              <svg viewBox="0 0 200 200"><use href="#wheel"/></svg>
+            </div>
+            <span className="product__type">Pack completo</span>
+            <h3>Carta Natal + Numerología</h3>
+            <p className="product__desc">
+              Tu cielo astronómico interpretado en profundidad, tu numerología pitagórica entera,
+              y un capítulo final donde ambos sistemas dialogan entre sí.
+            </p>
+            <ul className="product__list">
+              <li>120 – 140 páginas</li>
+              <li>Diálogo astro-numerológico</li>
+              <li>Rueda zodiacal SVG personalizada</li>
+            </ul>
+            <div className="product__foot">
+              <span className="product__price">
+                <span className="amt">39€</span>
+                <span className="cur">España · 19€ LATAM</span>
+              </span>
+              <Link href="/precios/" className="btn btn-accent btn-sm">Encargar →</Link>
+            </div>
+          </article>
+
+          <article className="product">
+            <div className="product__icon">
+              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+            </div>
+            <span className="product__type">Astrología psicológica</span>
+            <h3>Carta Natal Interpretada</h3>
+            <p className="product__desc">
+              Big Three, planetas personales y transpersonales, Quirón, Nodos, casas,
+              configuraciones especiales. Lenguaje psicológico contemporáneo, alejado del esoterismo vacío.
+            </p>
+            <ul className="product__list">
+              <li>60 – 70 páginas</li>
+              <li>10.000+ palabras de interpretación</li>
+              <li>Rueda zodiacal SVG incluida</li>
+            </ul>
+            <div className="product__foot">
+              <span className="product__price">
+                <span className="amt">29€</span>
+                <span className="cur">España · 14€ LATAM</span>
+              </span>
+              <Link href="/precios/" className="btn btn-ink btn-sm">Encargar</Link>
+            </div>
+          </article>
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
-      <section style={{ background: 'var(--bg)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: '820px', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Cómo funciona</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-              }}
-            >
-              Precisión astronómica, lenguaje humano
-            </h2>
+      {/* ── METHOD ── */}
+      <section className="method" id="metodo">
+        <div className="section-head">
+          <div className="ornament-line">
+            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-            {HOW_IT_WORKS.map(({ step, title, body }) => (
-              <div key={step} style={{ display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-italianno)',
-                    fontSize: '3rem',
-                    color: 'var(--gold)',
-                    lineHeight: 1,
-                    flexShrink: 0,
-                    width: '56px',
-                    textAlign: 'center',
-                  }}
-                >
-                  {step}
-                </span>
-                <div>
-                  <h3 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.2rem', color: 'var(--ink)', marginBottom: '8px' }}>
-                    {title}
-                  </h3>
-                  <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)', lineHeight: 1.65 }}>
-                    {body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <span className="eyebrow">III · El proceso</span>
+          <h2>Cuatro pasos desde tus datos hasta tu correo.</h2>
+          <p className="lead">Transparencia total sobre cómo se hace un estudio de verdad.</p>
+        </div>
+        <div className="method__grid">
+          <article className="step">
+            <div className="step__icon">
+              <svg viewBox="0 0 100 100"><use href="#sun"/></svg>
+            </div>
+            <span className="step__num">Paso 01</span>
+            <h3>Cálculos astronómicos exactos</h3>
+            <p>
+              Usamos <strong>Swiss Ephemeris</strong>, la librería de cálculo planetario de referencia.
+              Precisión de segundos de arco para cualquier fecha y lugar del último milenio.
+            </p>
+          </article>
+          <article className="step">
+            <div className="step__icon">
+              <svg viewBox="0 0 60 60"><use href="#star"/></svg>
+            </div>
+            <span className="step__num">Paso 02</span>
+            <h3>Interpretación narrativa</h3>
+            <p>
+              La narrativa se genera con IA entrenada en obras de referencia: Sasportas, Liz Greene,
+              Stephen Arroyo. Sin frases plantilla; cada párrafo nace de tus configuraciones reales.
+            </p>
+          </article>
+          <article className="step">
+            <div className="step__icon">
+              <svg viewBox="0 0 100 100"><use href="#moon"/></svg>
+            </div>
+            <span className="step__num">Paso 03</span>
+            <h3>Supervisión humana</h3>
+            <p>
+              Antes de enviarte el PDF, cada documento pasa por revisión humana. Si algo no encaja
+              con tus datos, se ajusta a mano. Por eso tardamos 24–48 horas y no diez segundos.
+            </p>
+          </article>
+          <article className="step">
+            <div className="step__icon">
+              <svg viewBox="0 0 200 200"><use href="#wheel"/></svg>
+            </div>
+            <span className="step__num">Paso 04</span>
+            <h3>Entrega y propiedad</h3>
+            <p>
+              Recibes el PDF por correo, sin marcas de agua. Es tuyo para siempre: imprímelo,
+              regálalo, reléelo en diez años. Guardamos una copia cifrada por si lo pierdes.
+            </p>
+          </article>
         </div>
       </section>
 
-      {/* ── TESTIMONIALS (placeholder) ── */}
-      <section style={{ background: 'var(--bg-warm)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: 'var(--max)', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Lo que dicen</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-              }}
-            >
-              Más de 14 estudios entregados
-            </h2>
+      {/* ── QUOTES ── */}
+      <section className="quotes">
+        <div className="section-head">
+          <div className="ornament-line">
+            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-            {[
-              { name: 'Sara M.', city: 'Madrid', text: 'Es la primera vez que un estudio astrológico me dice algo que me resuena de verdad. No son generalidades, es específico y profundo.' },
-              { name: 'Diego I.', city: 'Buenos Aires', text: 'La carta natal me la había calculado mil veces en otros sitios. Nunca había leído una interpretación tan completa y tan bien escrita.' },
-              { name: 'Lucía R.', city: 'Ciudad de México', text: 'El estudio numerológico llegó en menos de 10 minutos y tiene más páginas de las que esperaba. Cada sección tiene mucho contenido.' },
-            ].map(({ name, city, text }) => (
-              <div
-                key={name}
-                style={{
-                  background: 'var(--bg)',
-                  border: '1px solid var(--line)',
-                  borderRadius: '8px',
-                  padding: '28px 24px',
-                }}
-              >
-                <p style={{ fontFamily: 'var(--font-garamond)', fontStyle: 'italic', fontSize: '1.05rem', color: 'var(--ink-soft)', lineHeight: 1.65, marginBottom: '20px' }}>
-                  &ldquo;{text}&rdquo;
-                </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--bg-warm)', border: '1px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)' }}>
-                      {name[0]}
-                    </span>
-                  </div>
-                  <div>
-                    <p style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, fontSize: '0.85rem', color: 'var(--ink)' }}>{name}</p>
-                    <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.78rem', color: 'var(--ink-mute)' }}>{city}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <span className="eyebrow">IV · Lo que dicen</span>
+          <h2>Catorce primeras lectoras nos escribieron esto.</h2>
+        </div>
+        <div className="quotes__grid">
+          <blockquote className="quote">
+            <p>
+              Lo leí entero del tirón. Me reconocí en partes que llevaba años sin saber poner
+              en palabras. La parte del Quirón en Géminis me hizo llorar.
+            </p>
+            <footer>— Ana, 34 · Madrid</footer>
+          </blockquote>
+          <blockquote className="quote">
+            <p>
+              Llevo veinte años leyendo libros de astrología y esto es lo más fino que he leído
+              sobre mí misma en mi vida. Recomendado a mis tres hermanas.
+            </p>
+            <footer>— Verónica, 51 · Buenos Aires</footer>
+          </blockquote>
+          <blockquote className="quote">
+            <p>
+              Esperaba el típico horóscopo y me llegó un libro. La parte de numerología
+              pitagórica explicada con mi nombre completo es brutal.
+            </p>
+            <footer>— Daniel, 28 · Ciudad de México</footer>
+          </blockquote>
+          <blockquote className="quote">
+            <p>
+              No creía nada en estas cosas. Mi pareja me lo regaló. Me ha cambiado
+              conversaciones enteras con mi madre.
+            </p>
+            <footer>— Marta, 42 · Barcelona</footer>
+          </blockquote>
         </div>
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ background: 'var(--bg)', padding: 'clamp(64px, 8vw, 96px) 32px' }}>
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-          <div className="section-head">
-            <span className="eyebrow">Preguntas frecuentes</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-garamond)',
-                fontWeight: 400,
-                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                color: 'var(--ink)',
-              }}
-            >
-              Resolvemos tus dudas
-            </h2>
+      <section className="faq">
+        <div className="section-head">
+          <div className="ornament-line">
+            <svg viewBox="0 0 60 60"><use href="#star"/></svg>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0', borderTop: '1px solid var(--line)' }}>
-            {FAQS.map(({ q, a }) => (
-              <details key={q} style={{ borderBottom: '1px solid var(--line)', padding: '24px 0' }}>
-                <summary
-                  style={{
-                    fontFamily: 'var(--font-garamond)',
-                    fontWeight: 500,
-                    fontSize: '1.1rem',
-                    color: 'var(--ink)',
-                    cursor: 'pointer',
-                    listStyle: 'none',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    gap: '16px',
-                  }}
-                >
-                  {q}
-                  <span style={{ color: 'var(--gold)', fontSize: '1.2rem', flexShrink: 0 }}>+</span>
-                </summary>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-garamond)',
-                    fontSize: '1rem',
-                    color: 'var(--ink-soft)',
-                    lineHeight: 1.7,
-                    marginTop: '16px',
-                    paddingRight: '32px',
-                  }}
-                >
-                  {a}
-                </p>
-              </details>
-            ))}
-          </div>
+          <span className="eyebrow">VI · Preguntas frecuentes</span>
+          <h2>Lo que nos preguntáis a menudo.</h2>
+        </div>
+        <div className="faq__list">
+          {FAQS.map(({ q, a }) => (
+            <details key={q} className="faq__item">
+              <summary>{q}</summary>
+              <p>{a}</p>
+            </details>
+          ))}
         </div>
       </section>
 
-      {/* ── CTA BOTTOM ── */}
-      <section
-        style={{
-          background: 'var(--accent)',
-          padding: 'clamp(64px, 8vw, 96px) 32px',
-          textAlign: 'center',
-        }}
-      >
-        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <p
-            style={{
-              fontFamily: 'var(--font-italianno)',
-              fontSize: '1.3rem',
-              color: 'rgba(247,238,219,.6)',
-              letterSpacing: '0.12em',
-              marginBottom: '16px',
-            }}
-          >
-            Cosmyastral
-          </p>
-          <h2
-            style={{
-              fontFamily: 'var(--font-garamond)',
-              fontWeight: 400,
-              fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-              color: 'var(--bg)',
-              lineHeight: 1.2,
-              marginBottom: '24px',
-            }}
-          >
-            Empieza por lo gratuito.
-            <br />
-            <em>Decide después.</em>
-          </h2>
-          <p
-            style={{
-              fontFamily: 'var(--font-garamond)',
-              fontSize: '1.1rem',
-              color: 'rgba(247,238,219,.75)',
-              marginBottom: '36px',
-              lineHeight: 1.6,
-            }}
-          >
-            La calculadora es gratis para siempre. El estudio premium, solo si
-            quieres profundizar.
+      {/* ── CTA FINAL ── */}
+      <section className="cta-final">
+        <div className="cta-final__inner">
+          <svg className="cta-final__wheel" aria-hidden="true">
+            <use href="#wheel"/>
+          </svg>
+          <h2>¿Empezamos por algo gratis?</h2>
+          <p>
+            Tu carta natal calculada con precisión astronómica, sin pagar, sin registro.
+            Si te gusta, vuelves a por el estudio largo.
           </p>
           <Link href="/carta-natal/" className="btn btn-gold btn-xl">
-            Calcular mi carta natal gratis →
+            Calcular mi carta natal →
           </Link>
         </div>
       </section>
