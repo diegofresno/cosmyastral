@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
@@ -119,8 +120,14 @@ const itemListSchema = {
   })),
 };
 
-const GARANTIAS = [
-  { icon: '⚡', title: 'Entrega en menos de 10 minutos', desc: 'Recibes el PDF en tu correo inmediatamente tras el pago. Sin esperas.' },
+const BoltIcon = () => (
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true" style={{ margin: '0 auto' }}>
+    <path d="M13 2L3 14h8v8l10-12h-8z" />
+  </svg>
+);
+
+const GARANTIAS: { icon: ReactNode; title: string; desc: string }[] = [
+  { icon: <BoltIcon />, title: 'Entrega en menos de 10 minutos', desc: 'Recibes el PDF en tu correo inmediatamente tras el pago. Sin esperas.' },
   { icon: '✦', title: 'Cálculo con Swiss Ephemeris', desc: 'El mismo software astronómico que usa astro.com. Posiciones exactas al segundo de arco.' },
   { icon: '↩', title: '7 días de garantía', desc: 'Si el estudio no te convence por cualquier motivo, te devolvemos el dinero.' },
   { icon: '☽', title: 'Interpretación narrativa', desc: 'No tablas ni listas. Texto continuo, escrito en un español cuidado y comprensible.' },
