@@ -65,8 +65,8 @@
 
 /* ============ ANIMATIONS ============ */
 @keyframes rotate {
-  from { transform: translate(-50%,-50%) rotate(0deg); }
-  to   { transform: translate(-50%,-50%) rotate(360deg); }
+  from { rotate: 0deg; }
+  to   { rotate: 360deg; }
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -192,7 +192,7 @@
 .hero__wheel {
   position: absolute;
   top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
+  translate: -50% -50%;
   width: min(720px,90vw); height: min(720px,90vw);
   color: var(--brown);
   opacity: .08;
@@ -453,7 +453,7 @@
 }
 @media (max-width: 600px) {
   .hero { padding: 60px 24px 80px; }
-  .hero__wheel { top: 0; transform: translateX(-50%); width: 100vw; height: 100vw; }
+  .hero__wheel { top: 0; translate: -50% 0; width: 100vw; height: 100vw; }
   .hero__ornament span { display: none; }
   .hero__meta { grid-template-columns: 1fr; gap: 24px; }
   .highlights { grid-template-columns: repeat(2,1fr); }
