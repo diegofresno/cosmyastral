@@ -163,7 +163,7 @@ export default function PreciosPage() {
         <div style={{ maxWidth: '680px', margin: '0 auto' }}>
           <p className="eyebrow">Estudios personalizados</p>
           <h1 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(2rem,4.5vw,3.4rem)', lineHeight: 1.15, color: 'var(--ink)', marginBottom: '20px' }}>
-            Más que datos: una lectura que puedes leer
+            Más que datos: una interpretación que te habla
           </h1>
           <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1.15rem', color: 'var(--ink-soft)', lineHeight: 1.65 }}>
             Los estudios gratuitos te dan las posiciones. Los estudios premium te explican qué significan. 45–120 páginas de interpretación narrativa en PDF, entregadas en menos de 10 minutos.
