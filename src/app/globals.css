@@ -423,10 +423,8 @@
 .faq { padding: 100px 32px; max-width: var(--max-narrow); margin: 0 auto; }
 .faq__list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
 .faq__item { border-bottom: 1px solid var(--line); padding: 24px 0; }
-.faq__item summary { font-family: var(--font-garamond), serif; font-size: 1.35rem; font-weight: 500; cursor: pointer; list-style: none; position: relative; padding-right: 36px; color: var(--ink); line-height: 1.3; }
+.faq__item summary { font-family: var(--font-garamond), serif; font-size: 1.35rem; font-weight: 500; cursor: pointer; list-style: none; color: var(--ink); line-height: 1.3; }
 .faq__item summary::-webkit-details-marker { display: none; }
-.faq__item summary::after { content: '✦'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--gold); transition: transform .4s; }
-.faq__item[open] summary::after { transform: translateY(-50%) rotate(180deg); color: var(--accent); }
 .faq__item p { margin: 16px 0 0; font-family: var(--font-garamond), serif; font-size: 1.1rem; color: var(--ink-soft); line-height: 1.6; }
 
 /* ---- CTA Final ---- */
@@ -463,6 +461,73 @@
   .method__grid { grid-template-columns: 1fr; }
   .calc__form { padding: 28px 24px; }
   .calc__row { grid-template-columns: 1fr; }
+}
+
+
+/* ---- Article detail (blog posts) ---- */
+.article-hero-img { margin: 0 0 48px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 24px rgba(42,28,16,.10); }
+.article-hero-img > div { width: 100%; }
+
+.toc-sidebar { position: sticky; top: 88px; }
+.toc__label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-mute); padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+.toc__list { list-style: none; padding: 0; margin: 0; }
+.toc__link { font-family: var(--font-inter), sans-serif; font-size: 0.83rem; color: var(--ink-mute); text-decoration: none; padding: 6px 0 6px 12px; border-left: 2px solid transparent; display: block; transition: color .2s, border-left-color .2s; line-height: 1.4; }
+.toc__link:hover { color: var(--ink); }
+.toc__link.is-active { color: var(--accent); border-left-color: var(--accent); font-weight: 500; }
+
+.article-content h2 { font-family: var(--font-garamond), serif; font-weight: 500; font-size: clamp(1.6rem,3vw,2.4rem); line-height: 1.15; letter-spacing: -.01em; margin: 56px 0 18px; color: var(--ink); padding-top: 40px; border-top: 1px solid var(--line-soft); scroll-margin-top: 100px; }
+.article-content h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.article-content h3 { font-family: var(--font-garamond), serif; font-weight: 500; font-size: 1.5rem; line-height: 1.2; margin: 36px 0 14px; color: var(--ink); }
+.article-content p { font-family: var(--font-garamond), serif; font-size: 1.18rem; line-height: 1.65; color: var(--ink-soft); margin: 0 0 20px; }
+.article-content ul, .article-content ol { font-family: var(--font-garamond), serif; font-size: 1.12rem; line-height: 1.6; color: var(--ink-soft); padding-left: 24px; margin: 0 0 20px; }
+.article-content li { margin-bottom: 8px; }
+.article-content strong { color: var(--ink); font-weight: 600; }
+.article-content em { color: var(--brown); font-style: italic; }
+.article-content a { color: var(--accent); text-decoration: underline; }
+.article-note { font-size: .9rem !important; color: var(--ink-mute) !important; margin-top: 8px !important; }
+
+.article-cta-box { background: var(--ink); color: var(--bg); border-radius: var(--radius); padding: 36px 32px; text-align: center; margin: 48px 0; }
+.article-cta-box h3 { font-family: var(--font-garamond), serif; font-weight: 400; font-size: 1.8rem; line-height: 1.15; margin: 0 0 12px; color: var(--bg); }
+.article-cta-box p { font-family: var(--font-garamond), serif; font-style: italic; font-size: 1.1rem; color: rgba(247,238,219,.75); margin: 0 0 0; line-height: 1.55; }
+.article-cta-box .cta-btns { display: flex; flex-direction: column; gap: 12px; align-items: stretch; margin-top: 24px; }
+.article-cta-box .cta-btns .btn { text-align: center; box-sizing: border-box; white-space: normal; }
+
+.article-table-wrap { overflow-x: auto; margin: 24px 0 32px; }
+.article-table { width: 100%; border-collapse: collapse; font-family: var(--font-garamond), serif; font-size: 1.05rem; min-width: 400px; }
+.article-table thead tr { background: var(--bg-warm); border-bottom: 2px solid var(--gold); }
+.article-table th { padding: 12px 16px; text-align: left; color: var(--ink); font-weight: 600; }
+.article-table tbody tr { border-bottom: 1px solid var(--line); }
+.article-table tbody tr:nth-child(even) { background: rgba(247,238,219,0.4); }
+.article-table td { padding: 12px 16px; color: var(--ink-soft); }
+.article-table td:first-child { font-weight: 500; color: var(--ink); }
+
+.zodiac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin: 24px 0 32px; }
+.zodiac-card { background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; }
+.zodiac-card__head { display: flex; align-items: center; gap: 11px; margin-bottom: 9px; }
+.zodiac-card__name { font-family: var(--font-garamond), serif; font-size: 1.1rem; font-weight: 600; color: var(--accent); }
+.zodiac-card__desc { margin: 0; font-size: .95rem; line-height: 1.5; color: var(--ink-soft); }
+
+.faq > h2 { font-family: var(--font-garamond), serif; font-weight: 400; font-size: clamp(1.8rem,3vw,2.6rem); color: var(--ink); margin: 0 0 40px; text-align: center; }
+
+/* FAQ / details accordion — shared rules for all <details> FAQ elements */
+details > summary { cursor: pointer; user-select: none; }
+.faq-icon { display: inline-block; transition: transform .25s ease; }
+details[open] .faq-icon { transform: rotate(45deg); }
+
+/* Blog grid — featured post responsive */
+@media (max-width: 680px) {
+  .featured-post { grid-template-columns: 1fr !important; }
+}
+/* Article responsive */
+@media (max-width: 980px) {
+  .article-wrap { padding: 48px 32px 80px; }
+  .article-wrap:has(.toc-sidebar) { grid-template-columns: 1fr; }
+  .toc-sidebar { display: none !important; }
+}
+@media (max-width: 600px) {
+  .article-wrap { padding: 40px 20px 72px; }
+  .page-hero { padding: 40px 20px 48px; }
+  .zodiac-grid { grid-template-columns: 1fr; }
 }
 
 } /* end @layer components */

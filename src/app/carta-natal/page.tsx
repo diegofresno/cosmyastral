@@ -135,8 +135,11 @@ export default function CartaNatalPage() {
           <div style={{ borderTop: '1px solid var(--line)' }}>
             {FAQS.map(({ q, a }) => (
               <details key={q} style={{ borderBottom: '1px solid var(--line)', padding: '22px 0' }}>
-                <summary style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.05rem', color: 'var(--ink)', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
-                  {q}<span style={{ color: 'var(--gold)', flexShrink: 0 }}>+</span>
+                <summary style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.05rem', color: 'var(--ink)', cursor: 'pointer', listStyle: 'none' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', alignItems: 'center' }}>
+                    <span>{q}</span>
+                    <span className="faq-icon" style={{ color: 'var(--gold)', flexShrink: 0, fontSize: '1.3rem', lineHeight: 1 }}>+</span>
+                  </div>
                 </summary>
                 <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)', lineHeight: 1.7, marginTop: '14px', paddingRight: '24px' }}>{a}</p>
               </details>

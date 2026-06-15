@@ -1,0 +1,29 @@
+# Cosmyastral — Astrología y numerología en español
+
+> Calculadoras gratuitas de carta natal y numerología para España y LATAM.
+> Estudios personalizados en PDF con cálculo astronómico Swiss Ephemeris e interpretación narrativa.
+> Los estudios se generan con IA bajo supervisión humana y revisión por astrólogas profesionales.
+
+## Páginas principales
+
+- Carta natal gratis: https://cosmyastral.com/carta-natal/
+- Numerología gratis: https://cosmyastral.com/numerologia/
+- Ascendente gratis: https://cosmyastral.com/ascendente/
+- Estudios PDF (precios): https://cosmyastral.com/precios/
+- Blog de astrología y numerología: https://cosmyastral.com/blog/
+
+## Artículos del blog
+
+- Carta natal gratis explicada: https://cosmyastral.com/blog/carta-natal-gratis-explicada/
+- Luna llena: significado astrológico: https://cosmyastral.com/blog/luna-llena-significado-astrologico/
+- Luna en Escorpio en la carta natal: https://cosmyastral.com/blog/luna-en-escorpio-carta-natal/
+- 11:11 significado espiritual y numerológico: https://cosmyastral.com/blog/11-11-significado-espiritual/
+- Camino de Vida 11 — número maestro: https://cosmyastral.com/blog/camino-de-vida-11-numero-maestro/
+- Revolución solar: qué es y cómo calcularla: https://cosmyastral.com/blog/revolucion-solar-que-es-como-calcularla/
+
+## Sobre el sitio
+
+Cosmyastral usa Swiss Ephemeris (el mismo motor de cálculo de astro.com) para posiciones planetarias exactas.
+Las interpretaciones son narrativas en español neutro, comprensibles sin conocimientos previos de astrología.
+Los precios de los estudios PDF son 19 € (numerología), 29 € (carta natal) y 39 € (pack completo) para España;
+la mitad aproximada para Latinoamérica.

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { garamond, inter, italianno } from "@/lib/fonts";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
+
+const GA_ID = "G-C2C534SDKR";
 
 const SITE = "https://cosmyastral.com";
 
@@ -34,12 +37,21 @@ export const metadata: Metadata = {
     title: "Cosmyastral · Carta natal y numerología narradas con cuidado",
     description:
       "Calculadora de carta natal gratuita y estudios personalizados de astrología y numerología.",
+    images: [
+      {
+        url: `${SITE}/blog/blog-carta-natal.png`,
+        width: 1200,
+        height: 630,
+        alt: "Cosmyastral — Carta natal y numerología",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cosmyastral · Carta natal y numerología",
     description:
       "Calculadora de carta natal gratuita y estudios personalizados.",
+    images: [`${SITE}/blog/blog-carta-natal.png`],
   },
   alternates: {
     canonical: "/",
@@ -55,14 +67,6 @@ const websiteSchema = {
   description:
     "Calculadora de carta natal y numerología gratuita. Estudios personalizados en PDF con Swiss Ephemeris.",
   inLanguage: "es",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE}/blog/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const organizationSchema = {
@@ -73,7 +77,7 @@ const organizationSchema = {
   url: SITE,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE}/logo.png`,
+    url: `${SITE}/logo.svg`,
     width: 512,
     height: 512,
   },
@@ -106,6 +110,13 @@ export default function RootLayout({
       className={`${garamond.variable} ${inter.variable} ${italianno.variable}`}
     >
       <body>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}</Script>
         <JsonLd data={websiteSchema} />
         <JsonLd data={organizationSchema} />
         <Nav />

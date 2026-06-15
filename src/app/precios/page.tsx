@@ -70,30 +70,52 @@ const ESTUDIOS = [
   },
 ];
 
+const PRODUCT_IMAGES: Record<string, string> = {
+  numerologia:  `${SITE}/blog/blog-camino-11.png`,
+  'carta-natal': `${SITE}/blog/blog-carta-natal.png`,
+  pack:         `${SITE}/blog/blog-luna-llena.png`,
+};
+
+const productSchemas = ESTUDIOS.map((e) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': `${SITE}/precios/#${e.id}`,
+  name: e.name,
+  description: e.schema_desc,
+  url: `${SITE}/precios/`,
+  image: PRODUCT_IMAGES[e.id],
+  brand: { '@type': 'Brand', name: 'Cosmyastral' },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Precio España',
+      price: String(e.price_es),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE}/precios/`,
+      eligibleRegion: { '@type': 'Country', name: 'España' },
+    },
+    {
+      '@type': 'Offer',
+      name: 'Precio LATAM',
+      price: String(e.price_latam),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: `${SITE}/precios/`,
+    },
+  ],
+}));
+
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Estudios personalizados Cosmyastral',
   url: `${SITE}/precios/`,
+  numberOfItems: ESTUDIOS.length,
   itemListElement: ESTUDIOS.map((e, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    item: {
-      '@type': 'Product',
-      '@id': `${SITE}/precios/#${e.id}`,
-      name: e.name,
-      description: e.schema_desc,
-      url: `${SITE}/precios/`,
-      brand: { '@type': 'Brand', name: 'Cosmyastral' },
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'EUR',
-        lowPrice: String(e.price_latam),
-        highPrice: String(e.price_es),
-        offerCount: 2,
-        availability: 'https://schema.org/InStock',
-      },
-    },
+    item: { '@id': `${SITE}/precios/#${e.id}` },
   })),
 };
 
@@ -125,6 +147,7 @@ export default function PreciosPage() {
   return (
     <>
       <JsonLd data={itemListSchema} />
+      {productSchemas.map((s) => <JsonLd key={s['@id']} data={s} />)}
       <JsonLd data={faqSchema} />
       <Breadcrumb crumbs={[{ label: 'Estudios PDF', href: '/precios/' }]} />
 
@@ -142,8 +165,8 @@ export default function PreciosPage() {
       </section>
 
       {/* PRICING CARDS */}
-      <section style={{ background: 'var(--bg-warm)', padding: '0 32px clamp(80px,10vw,120px)' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+      <section style={{ background: 'var(--bg-warm)', padding: 'clamp(48px,6vw,72px) 32px clamp(80px,10vw,120px)' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
           {ESTUDIOS.map((e) => (
             <div
               key={e.id}
@@ -229,8 +252,11 @@ export default function PreciosPage() {
           <div style={{ borderTop: '1px solid var(--line)' }}>
             {FAQS.map(({ q, a }) => (
               <details key={q} style={{ borderBottom: '1px solid var(--line)', padding: '22px 0' }}>
-                <summary style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.05rem', color: 'var(--ink)', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', gap: '16px' }}>
-                  {q}<span style={{ color: 'var(--gold)', flexShrink: 0 }}>+</span>
+                <summary style={{ fontFamily: 'var(--font-garamond)', fontWeight: 500, fontSize: '1.05rem', color: 'var(--ink)', cursor: 'pointer', listStyle: 'none' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', alignItems: 'center' }}>
+                    <span>{q}</span>
+                    <span className="faq-icon" style={{ color: 'var(--gold)', flexShrink: 0, fontSize: '1.3rem', lineHeight: 1 }}>+</span>
+                  </div>
                 </summary>
                 <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)', lineHeight: 1.7, marginTop: '14px', paddingRight: '24px' }}>{a}</p>
               </details>

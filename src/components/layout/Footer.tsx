@@ -14,10 +14,7 @@ const LEARN = [
 ];
 
 const LEGAL = [
-  { href: '/sobre-nosotros/', label: 'Sobre nosotros' },
-  { href: '/privacidad/',     label: 'Privacidad' },
-  { href: '/terminos/',       label: 'Términos' },
-  { href: '/contacto/',       label: 'Contacto' },
+  { href: '/privacidad/', label: 'Privacidad' },
 ];
 
 function FooterCol({ title, links }: { title: string; links: { href: string; label: string }[] }) {
