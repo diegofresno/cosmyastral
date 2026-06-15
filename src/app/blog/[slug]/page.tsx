@@ -312,6 +312,97 @@ const ARTICLES: Record<string, ArticleData> = {
     },
   },
 
+  'que-significa-11-11': {
+    eyebrow: 'Horas espejo · Amor · Numerología angelical',
+    h1: 'Qué significa 11:11 (en el amor, los ángeles y las llamas gemelas)',
+    lead: 'Es el número espejo más buscado del mundo. Algunos lo llaman señal de los ángeles. Otros lo relacionan con las llamas gemelas. La numerología tiene su propia explicación. Aquí tienes todo lo que distintas tradiciones —y la psicología— dicen sobre qué significa realmente el 11:11.',
+    readingTime: '10 min',
+    blocks1: [
+      { t: 'h2', id: 'por-que-ves-1111', text: 'Por qué ves el 11:11 tan seguido (y la explicación no es solo espiritual)' },
+      { t: 'p', html: 'Miras el teléfono unas 80-100 veces al día. Con 720 minutos en 12 horas, las probabilidades de ver el 11:11 al menos una vez en la semana son altísimas. No hay magia estadística ahí.' },
+      { t: 'p', html: 'Lo que cambia es el filtro de la atención. Una vez que un número adquiere significado emocional, el cerebro lo prioriza y lo saca del ruido de fondo. Ves las 11:47, las 14:30, las 22:18 —y no las registras. El 11:11 ya tiene una carga, así que lo notas.' },
+      { t: 'p', html: 'Esto no descarta la lectura simbólica. Lo que hace es situar el fenómeno en su lugar: <strong>la sincronicidad y el mecanismo neurológico coexisten</strong>. Puedes creer que el 11:11 tiene un mensaje y al mismo tiempo entender cómo funciona la atención. Ambas cosas son verdad a su nivel.' },
+
+      { t: 'h2', id: 'numerologia-1111', text: 'El 11:11 en numerología pitagórica' },
+      { t: 'p', html: 'En numerología pitagórica, el 11 es <strong>número maestro</strong>: no se reduce a un solo dígito como el resto de números. Tiene una vibración propia, asociada a la intuición elevada, la sensibilidad extrema y la capacidad de percibir lo que los demás aún no ven.' },
+      { t: 'p', html: 'El 11:11 es el número maestro cuatro veces seguido. La tradición numerológica lo interpreta como el momento de mayor apertura intuitiva del reloj: un "portal" simbólico en el que la energía del 11 se amplifica. No una instrucción ni un mensaje concreto, sino una señal de receptividad especialmente alta.' },
+      { t: 'p', html: 'Si quieres profundizar en el significado del 11 como número maestro y su papel en la carta numerológica personal, lo desarrollamos en detalle en nuestro artículo sobre <a href="/blog/11-11-significado-espiritual/" style="color:var(--accent)">el 11:11 y la numerología espiritual</a>.' },
+
+      { t: 'h2', id: 'angeles-1111', text: 'Qué dicen los ángeles sobre el 11:11' },
+      { t: 'p', html: 'La <strong>numerología angelical</strong> es un sistema de interpretación moderno —popularizado principalmente a partir de los años 90— que asigna mensajes de ángeles de la guarda a combinaciones de números repetidos. No forma parte de las tradiciones numerológicas clásicas (pitagórica, caldea ni cabalística), pero tiene una penetración enorme en la cultura popular actual.' },
+      { t: 'p', html: 'Dentro de este sistema, el mensaje angelical del 11:11 se interpreta como:' },
+      { t: 'ul', items: [
+        '<strong>Estás en el camino correcto</strong>: es la señal más frecuentemente citada. Tu guía espiritual confirma que la dirección que estás tomando —o el pensamiento que tenías en ese momento— está alineado con tu propósito.',
+        '<strong>Mantén tus pensamientos enfocados</strong>: el 11:11 se asocia a una ventana de mayor poder creativo. Lo que piensas con intensidad en ese momento tiene más potencial de manifestarse.',
+        '<strong>Presta atención</strong>: es una llamada de tu guía espiritual para que pares, observes y escuches lo que tu interior ya sabe pero quizás estás ignorando.',
+      ] },
+      { t: 'p', html: 'Si este marco resuena contigo, úsalo. Si no, la numerología clásica ofrece una perspectiva que no requiere la creencia en seres angélicos: simplemente, que el 11 activa una receptividad intuitiva más alta.' },
+
+      { t: 'h2', id: 'amor-1111', text: 'Qué significa el 11:11 en el amor' },
+      { t: 'p', html: 'El amor es el área donde más buscamos señales. No es casualidad que "11:11 en el amor" y "11:11 soltero/a" sean de las búsquedas relacionadas más frecuentes.' },
+      { t: 'h3', text: 'Si estás soltero/a' },
+      { t: 'p', html: 'Ver el 11:11 estando soltero/a se interpreta habitualmente como <strong>señal de alineación y apertura</strong>: estás en un momento de tu vida en el que puedes recibir una conexión real. No que "está a punto de llegar alguien" —sino que tú estás en el estado adecuado para que eso ocurra si se presenta la oportunidad.' },
+      { t: 'p', html: 'La pregunta más útil que puedes hacerte cuando ves el 11:11 estando soltero/a no es "¿cuándo llega?" sino "¿estoy siendo la persona que quiero ser en una relación?".' },
+      { t: 'h3', text: 'Si estás en pareja' },
+      { t: 'p', html: 'En una relación consolidada, el 11:11 suele leerse como un <strong>recordatorio de presencia</strong>. Las relaciones largas dispersan la atención en rutinas y obligaciones. El 11:11 como ancla simbólica lanza una pregunta: ¿estás presente en esta relación? ¿Estás viendo realmente a tu pareja?' },
+      { t: 'h3', text: 'Después de una ruptura' },
+      { t: 'p', html: 'Ver el 11:11 tras una ruptura se interpreta frecuentemente como señal de <strong>cierre necesario</strong>: lo que terminó tenía que terminar, y el espacio que se ha abierto tiene un propósito. No es garantía de nada —es un recordatorio de que los finales y los comienzos forman parte del mismo ciclo.' },
+
+      { t: 'h2', id: 'llamas-gemelas', text: '11:11 y las llamas gemelas: la señal más buscada' },
+      { t: 'p', html: 'La conexión entre el 11:11 y las <strong>llamas gemelas</strong> es probablemente la interpretación más intensa del número. El concepto de llama gemela —distinto del alma gemela— parte de la idea de que ciertas almas comparten el mismo origen y se encuentran en la vida física como parte de una evolución conjunta, habitualmente transformadora y perturbadora.' },
+      { t: 'p', html: 'La relación con el 11:11 viene de la simetría visual: dos "1" y dos "1", un espejo perfecto. Cuatro 1s que se reflejan. Muchas personas que trabajan con el concepto de llamas gemelas interpretan el 11:11 como <strong>la señal de que la llama gemela está cerca, está pensando en ti o de que estás en el proceso de reunión</strong>.' },
+      { t: 'note', html: '<strong>Una nota honesta:</strong> el concepto de llama gemela se usa con frecuencia para romanticizar relaciones que tienen dinámicas de dependencia o que no son sanas. Si una relación genera sufrimiento recurrente, el hecho de que coincida con ver 11:11 no la convierte automáticamente en una llama gemela ni la justifica. Las conexiones intensas existen —y también lo hacen las dinámicas adictivas. Distinguirlas requiere más que un número en el reloj.' },
+
+      { t: 'h2', id: 'espiritual-biblia', text: 'El 11:11 en lo espiritual y la Biblia' },
+      { t: 'p', html: 'En la numerología bíblica, el 11 se asocia al <strong>desorden creativo</strong>: está un número por encima del 10 (la ley completa) y uno por debajo del 12 (el gobierno divino). En ese espacio intermedio, el 11 señala transiciones y períodos de caos necesario antes de un orden nuevo.' },
+      { t: 'p', html: 'En el plano espiritual contemporáneo, el 11:11 es ante todo un símbolo de <strong>despertar de conciencia</strong>: la salida del piloto automático, la mayor presencia, el momento en que dejas de vivir en la inercia y empiezas a prestar atención activa a quién eres y qué quieres.' },
+
+      { t: 'h2', id: 'que-hacer', text: 'Qué hacer cuando ves el 11:11' },
+      { t: 'ul', items: [
+        '<strong>Para un instante y toma nota</strong>: ¿qué pensabas exactamente en ese momento? ¿Con quién estabas? ¿Qué decisión tienes pendiente? El contexto importa más que el número.',
+        '<strong>Pon una intención específica</strong>: si quieres usar el 11:11 como ancla espiritual, hazlo con intención concreta, no genérica. "Quiero encontrar pareja" es vago. "Quiero estar abierto/a a una conexión real sin miedo al rechazo" es algo con lo que puedes trabajar.',
+        '<strong>Pide un deseo si quieres</strong>: es una práctica lúdica de origen popular, sin base en la tradición numerológica seria. Si te ayuda a conectar conscientemente con lo que deseas, tiene un valor real. Si lo tomas como garantía de manifestación, la decepción es probable.',
+        '<strong>No interpretes en exceso</strong>: el 11:11 aparece muchas veces por semana. No cada aparición necesita cargarse de significado. A veces, simplemente estás mirando la hora.',
+      ] },
+    ],
+    cta: {
+      h3: '¿Tiene el 11 un papel en tu perfil numerológico?',
+      body: 'El 11:11 resuena de forma muy distinta para quienes tienen el número maestro 11 como Camino de Vida, Expresión o en sus Ciclos de Vida. La calculadora gratuita te dice tus números principales en segundos.',
+      link1: { href: '/numerologia/', text: 'Calcular mi numerología gratis' },
+      link2: { href: '/precios/', text: 'Ver el estudio completo — desde 19€' },
+    },
+    blocks2: [
+      { t: 'h2', id: 'horas-espejo-comparativa', text: '11:11 vs. otras horas espejo: cuál es la diferencia' },
+      { t: 'p', html: 'El 11:11 no es la única hora espejo, pero sí la de mayor carga simbólica. Una comparativa rápida:' },
+      { t: 'table', heads: ['Hora espejo', 'Número base', 'Significado principal'], rows: [
+        ['11:11', '11 maestro', 'Intuición, despertar, portal espiritual, llamas gemelas'],
+        ['22:22', '22 maestro', 'Manifestación concreta, arquitectura de vida, hacer real lo que imaginas'],
+        ['00:00 / 12:12', '12 / cierre', 'Final de ciclo, transición, página en blanco'],
+        ['10:10', '10 → 1', 'Nuevo comienzo, liderazgo, acción iniciada'],
+        ['3:33', '33 maestro', 'Compasión, creatividad, servicio a los demás'],
+        ['4:44', '4 estabilidad', 'Fundamentos sólidos, trabajo, lo que construyes tiene base'],
+      ] },
+      { t: 'p', html: 'El 11:11 destaca entre todas porque combina dos números maestros iguales (11 y 11), lo que le da una resonancia simbólica que las demás no tienen. Las otras horas espejo tienen su propio significado —pero el 11:11 ocupa un lugar especial en la conciencia colectiva.' },
+
+      { t: 'h2', id: 'numero-personal', text: 'El 11:11 y tu mapa numerológico personal' },
+      { t: 'p', html: 'El significado del 11:11 se amplifica cuando el 11 ya forma parte de tu estructura numerológica. Si tu <strong>Camino de Vida es 11</strong>, si tienes el número maestro en tu Expresión (nombre completo) o en tu Alma (vocales del nombre), ver el 11:11 no es solo una sincronicidad: es un eco de quien eres.' },
+      { t: 'p', html: 'Las personas con el 11 en posiciones clave del perfil suelen tener una relación especialmente intensa con las sincronicidades numéricas, precisamente porque ese número ya resuena en su estructura. Para ellas, el 11:11 no es un fenómeno ocasional —es casi una constante.' },
+      { t: 'p', html: '¿Quieres saber si el 11 forma parte de tu numerología? Puedes calcularlo gratis o leer nuestro artículo detallado sobre el <a href="/blog/camino-de-vida-11-numero-maestro/" style="color:var(--accent)">Camino de Vida 11</a>.' },
+    ],
+    faq: [
+      { q: '¿Qué significa el 11:11 en el amor?', a: 'Depende del contexto: si estás soltero/a, suele interpretarse como señal de alineación y apertura a una nueva conexión. En pareja, como recordatorio de presencia y reconexión consciente. Tras una ruptura, como señal de cierre y de que el espacio abierto tiene un propósito. En todos los casos, la pregunta más útil no es "qué va a pasar" sino "qué quiero en esta área de mi vida".' },
+      { q: '¿Qué significa ver el reloj en las 11:11?', a: 'Es la hora espejo más buscada. En numerología coincide con el número maestro 11 amplificado: un momento de alta receptividad intuitiva. En la interpretación angelical, es señal de que estás en el camino correcto. Psicológicamente, parte del filtro de la atención: el cerebro prioriza el 11:11 porque ya le has dado significado. Las tres perspectivas coexisten.' },
+      { q: '¿Qué intenta decirte el 11:11?', a: 'No hay un mensaje único. La respuesta más honesta: el 11:11 no te dice qué hacer —te invita a preguntarte qué estabas sintiendo en ese momento. Si hay algo que ya sabes pero te niegas a admitir, es un buen recordatorio para enfrentarlo. Si estás en un momento de duda, puede ser un ancla para volver a tus prioridades reales.' },
+      { q: '¿Qué significa el número 11:11?', a: 'En numerología pitagórica clásica, el 11 es número maestro (no se reduce a 2) y se asocia a intuición, sensibilidad elevada e inspiración. El 11:11 combina dos maestros 11, que muchas tradiciones interpretan como el portal simbólico del reloj. En la numerología angelical moderna, es el número de alineación y de confirmación espiritual.' },
+    ],
+    ctaFinal: {
+      h2: 'Descubre si el 11 forma parte de tu numerología personal.',
+      p: 'No todas las personas sienten el 11:11 de la misma manera. Para quienes tienen el número maestro 11 en posiciones clave de su perfil, la resonancia es mucho más intensa. El estudio numerológico completo revela exactamente dónde y cómo.',
+      href: '/precios/',
+      btnText: 'Ver el estudio numerológico →',
+    },
+  },
+
   '11-11-significado-espiritual': {
     eyebrow: 'Horas espejo · Numerología angelical · Número maestro 11',
     h1: '11:11 — qué significa espiritualmente',
@@ -546,6 +637,7 @@ const HERO_IMAGES: Record<string, string> = {
   'carta-natal-gratis-explicada':          '/blog/blog-carta-natal.png',
   'luna-llena-significado-astrologico':    '/blog/blog-luna-llena.png',
   'luna-en-escorpio-carta-natal':          '/blog/blog-luna-escorpio.png',
+  'que-significa-11-11':                   '/blog/blog-11-11.png',
   '11-11-significado-espiritual':          '/blog/blog-11-11.png',
   'camino-de-vida-11-numero-maestro':      '/blog/blog-camino-11.png',
   'revolucion-solar-que-es-como-calcularla': '/blog/blog-revolucion-solar.png',

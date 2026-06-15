@@ -19,6 +19,7 @@ const HERO_IMAGES: Record<string, string> = {
   'carta-natal-gratis-explicada':            '/blog/blog-carta-natal.png',
   'luna-llena-significado-astrologico':      '/blog/blog-luna-llena.png',
   'luna-en-escorpio-carta-natal':            '/blog/blog-luna-escorpio.png',
+  'que-significa-11-11':                     '/blog/blog-11-11.png',
   '11-11-significado-espiritual':            '/blog/blog-11-11.png',
   'camino-de-vida-11-numero-maestro':        '/blog/blog-camino-11.png',
   'revolucion-solar-que-es-como-calcularla': '/blog/blog-revolucion-solar.png',

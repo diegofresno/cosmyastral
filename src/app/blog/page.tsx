@@ -36,6 +36,13 @@ export const POSTS = [
     date: '2026-05-08',
   },
   {
+    slug: 'que-significa-11-11',
+    title: 'Qué significa 11:11: amor, ángeles y llamas gemelas',
+    excerpt: 'El número espejo más buscado del mundo, explicado desde la numerología, la tradición angelical y el amor. Qué dice cada perspectiva —y cuál se acerca más a lo que realmente ocurre.',
+    category: 'Numerología',
+    date: '2026-06-15',
+  },
+  {
     slug: '11-11-significado-espiritual',
     title: '11:11 significado: ¿qué hay detrás del número espejo más popular?',
     excerpt: 'El 11:11 se ha convertido en un fenómeno viral. Te explicamos qué dice la numerología sobre los números espejo, el 11 como número maestro y por qué lo vemos tanto.',
