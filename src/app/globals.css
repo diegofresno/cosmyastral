@@ -453,7 +453,7 @@
 }
 @media (max-width: 600px) {
   .hero { padding: 60px 24px 80px; }
-  .hero__wheel { top: 38%; }
+  .hero__wheel { top: 25%; width: min(500px,80vw); height: min(500px,80vw); }
   .hero__ornament span { display: none; }
   .hero__meta { grid-template-columns: 1fr; gap: 24px; }
   .highlights { grid-template-columns: repeat(2,1fr); }
