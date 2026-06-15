@@ -197,7 +197,7 @@
   color: var(--brown);
   opacity: .08;
   z-index: 0;
-  animation: rotate 240s linear infinite;
+  animation: rotate 120s linear infinite;
   pointer-events: none;
 }
 .hero__content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
@@ -453,6 +453,7 @@
 }
 @media (max-width: 600px) {
   .hero { padding: 60px 24px 80px; }
+  .hero__wheel { top: 38%; }
   .hero__ornament span { display: none; }
   .hero__meta { grid-template-columns: 1fr; gap: 24px; }
   .highlights { grid-template-columns: repeat(2,1fr); }
