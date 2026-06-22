@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useRef, FormEvent } from 'react';
 import Link from 'next/link';
 import { calcChart, localToUTC } from '@/lib/astro';
 import type { ZodiacSign, SignPos } from '@/lib/astro';
@@ -102,6 +102,8 @@ const MODALITY_COLORS: React.CSSProperties = { background: 'var(--bg-warm)', col
 
 // ── Main component ────────────────────────────────────────────────────────────
 
+type GeoResult = { lat: number; lng: number; timezone: string; shortName: string; displayName: string };
+
 export default function BirthForm({ type }: Props) {
   const [fecha,     setFecha]     = useState('');
   const [hora,      setHora]      = useState('12:00');
@@ -109,8 +111,33 @@ export default function BirthForm({ type }: Props) {
   const [nombre,    setNombre]    = useState('');
   const [apellidos, setApellidos] = useState('');
   const [state,     setState]     = useState<State>({ status: 'idle' });
+  const [geoStatus, setGeoStatus] = useState<'idle' | 'searching' | 'ok' | 'error'>('idle');
+  const [geoResult, setGeoResult] = useState<GeoResult | null>(null);
+  const geoTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const isAstro = type === 'natal' || type === 'ascendente';
+
+  function handleCiudadChange(val: string) {
+    setCiudad(val);
+    setGeoResult(null);
+    setGeoStatus('idle');
+    if (geoTimer.current) clearTimeout(geoTimer.current);
+    if (val.trim().length < 3) return;
+    geoTimer.current = setTimeout(() => geocodeCity(val.trim()), 700);
+  }
+
+  async function geocodeCity(q: string) {
+    setGeoStatus('searching');
+    try {
+      const res = await fetch(`/api/geocode?q=${encodeURIComponent(q)}`);
+      if (!res.ok) { setGeoStatus('error'); return; }
+      const data: GeoResult = await res.json();
+      setGeoResult(data);
+      setGeoStatus('ok');
+    } catch {
+      setGeoStatus('error');
+    }
+  }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -124,13 +151,16 @@ export default function BirthForm({ type }: Props) {
         return;
       }
 
-      setState({ status: 'loading', msg: 'Buscando coordenadas de la ciudad...' });
-      const geoRes = await fetch(`/api/geocode?q=${encodeURIComponent(ciudad)}`);
-      if (!geoRes.ok) {
-        const err = await geoRes.json().catch(() => ({}));
-        throw new Error((err as { error?: string }).error ?? 'Ciudad no encontrada.');
+      let geo = geoResult;
+      if (!geo) {
+        setState({ status: 'loading', msg: 'Buscando coordenadas de la ciudad...' });
+        const geoRes = await fetch(`/api/geocode?q=${encodeURIComponent(ciudad)}`);
+        if (!geoRes.ok) {
+          const err = await geoRes.json().catch(() => ({}));
+          throw new Error((err as { error?: string }).error ?? 'Ciudad no encontrada.');
+        }
+        geo = await geoRes.json() as GeoResult;
       }
-      const geo = await geoRes.json() as { lat: number; lng: number; timezone: string; shortName: string };
 
       setState({ status: 'loading', msg: 'Calculando posiciones astronómicas...' });
       const utcDate = localToUTC(fecha, hora, geo.timezone);
@@ -183,7 +213,30 @@ export default function BirthForm({ type }: Props) {
               <Field label="Fecha de nacimiento" type="date" value={fecha} onChange={setFecha} required />
               <Field label="Hora de nacimiento"  type="time" value={hora}  onChange={setHora}  required />
             </div>
-            <Field label="Ciudad de nacimiento" type="text" value={ciudad} onChange={setCiudad} placeholder="p.ej. Madrid, España" required />
+            <label style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.78rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--ink-mute)' }}>
+                Ciudad de nacimiento
+              </span>
+              <input
+                type="text"
+                value={ciudad}
+                onChange={e => handleCiudadChange(e.target.value)}
+                placeholder="p.ej. Madrid, España"
+                required
+                style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', padding: '11px 14px', border: `1px solid ${geoStatus === 'error' ? '#fca5a5' : geoStatus === 'ok' ? '#86efac' : 'var(--line)'}`, borderRadius: '4px', background: 'var(--bg)', color: 'var(--ink)', outline: 'none', width: '100%', transition: 'border-color .2s' }}
+                onFocus={e => { if (geoStatus === 'idle') e.target.style.borderColor = 'var(--accent)'; }}
+                onBlur={e  => { if (geoStatus === 'idle') e.target.style.borderColor = 'var(--line)'; }}
+              />
+              {geoStatus === 'searching' && (
+                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.75rem', color: 'var(--ink-mute)' }}>Buscando ciudad…</span>
+              )}
+              {geoStatus === 'ok' && geoResult && (
+                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.75rem', color: '#16a34a' }}>✓ {geoResult.displayName}</span>
+              )}
+              {geoStatus === 'error' && (
+                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.75rem', color: '#dc2626' }}>Ciudad no encontrada. Prueba con el nombre en inglés o añade el país.</span>
+              )}
+            </label>
             <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '0.85rem', color: 'var(--ink-mute)', margin: '-8px 0 0', lineHeight: 1.5 }}>
               El ascendente cambia cada ~2 horas. Introduce la hora lo más exacta posible.
             </p>
