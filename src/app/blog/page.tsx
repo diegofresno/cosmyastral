@@ -14,6 +14,22 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'hora-espejo-11-11',
+    title: 'Hora espejo 11:11: qué son las horas espejo y las 24 que existen',
+    excerpt: 'Ver el 11:11, el 22:22 o el 01:01 en el reloj no es casualidad —al menos no del todo. Qué son las horas espejo, cuántas hay, qué dice la numerología de cada una y por qué el 11:11 encabeza la lista.',
+    category: 'Numerología',
+    date: '2026-06-19',
+    featured: false,
+  },
+  {
+    slug: 'luna-llena-julio-2026',
+    title: 'Luna llena de julio 2026 en Acuario: el yo frente al colectivo',
+    excerpt: 'El 29 de julio de 2026 la Luna llena ocurre en Acuario mientras el Sol transita Leo. Fecha exacta, hora, qué activa en cada Ascendente y cómo conecta con lo que sembraste en enero.',
+    category: 'Ciclos lunares',
+    date: '2026-06-17',
+    featured: false,
+  },
+  {
     slug: 'carta-natal-gratis-explicada',
     title: 'Carta natal gratis: qué es, cómo leerla y qué te dice realmente',
     excerpt: 'Entender tu carta natal más allá del signo solar. Te explicamos qué es cada elemento, cómo interpretar los planetas en los signos y por qué la hora de nacimiento importa.',
@@ -27,6 +43,13 @@ export const POSTS = [
     excerpt: 'La luna llena marca el clímax del ciclo lunar. Te explicamos qué significa astrológicamente, cómo afecta emocionalmente y cuándo caen las lunas llenas de 2026.',
     category: 'Ciclos lunares',
     date: '2026-05-15',
+  },
+  {
+    slug: 'luna-en-capricornio-carta-natal',
+    title: 'Luna en Capricornio en la carta natal: estructura emocional y el poder del tiempo',
+    excerpt: 'La Luna en Capricornio convierte la emoción en responsabilidad. Disciplina interior, dificultad con la vulnerabilidad y una lealtad sólida como la roca. Qué significa en tu carta.',
+    category: 'Astrología',
+    date: '2026-06-22',
   },
   {
     slug: 'luna-en-escorpio-carta-natal',
