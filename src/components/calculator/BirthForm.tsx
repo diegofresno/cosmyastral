@@ -13,6 +13,13 @@ import {
   buildSynthesis,
 } from '@/lib/interpretations';
 
+// ── GA4 helper ────────────────────────────────────────────────────────────────
+
+declare global { interface Window { gtag?: (...args: unknown[]) => void; } }
+function trackCalculatorCompleted(calculatorType: 'carta_natal' | 'ascendente' | 'numerologia') {
+  window.gtag?.('event', 'calculator_completed', { calculator_type: calculatorType });
+}
+
 // ── Types ────────────────────────────────────────────────────────────────────
 
 interface Props {
@@ -147,6 +154,7 @@ export default function BirthForm({ type }: Props) {
       if (type === 'numerologia') {
         const [y, m, d] = fecha.split('-').map(Number);
         const result = calcNumerology(nombre, apellidos, y, m, d, new Date().getUTCFullYear());
+        trackCalculatorCompleted('numerologia');
         setState({ status: 'ok', result: { type: 'numerologia', nombre: `${nombre} ${apellidos}`, ...result } });
         return;
       }
@@ -173,8 +181,10 @@ export default function BirthForm({ type }: Props) {
       const utcTime = `${String(utcDate.getUTCHours()).padStart(2,'0')}:${String(utcDate.getUTCMinutes()).padStart(2,'0')} UTC`;
 
       if (type === 'natal') {
+        trackCalculatorCompleted('carta_natal');
         setState({ status: 'ok', result: { type: 'natal', ...chart, city: geo.shortName, timezone: geo.timezone, utcTime } });
       } else {
+        trackCalculatorCompleted('ascendente');
         setState({ status: 'ok', result: { type: 'ascendente', ascendant: chart.ascendant, city: geo.shortName, timezone: geo.timezone, utcTime } });
       }
     } catch (err) {
