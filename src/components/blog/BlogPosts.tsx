@@ -23,6 +23,12 @@ const HERO_IMAGES: Record<string, string> = {
   '11-11-significado-espiritual':            '/blog/blog-11-11.png',
   'camino-de-vida-11-numero-maestro':        '/blog/blog-camino-11.png',
   'revolucion-solar-que-es-como-calcularla': '/blog/blog-revolucion-solar.png',
+  'luna-llena-julio-2026':                   '/blog/blog-luna-julio-2026.png',
+  'luna-nueva-julio-2026':                   '/blog/blog-luna-julio-2026.png',
+  'luna-en-capricornio-carta-natal':         '/blog/blog-luna-capricornio.png',
+  'luna-en-piscis-carta-natal':              '/blog/blog-luna-piscis.png',
+  'luna-en-sagitario-carta-natal':           '/blog/blog-luna-sagitario.png',
+  'hora-espejo-11-11':                       '/blog/blog-hora-espejo-1111.png',
 };
 
 function PostImage({ slug, title, size = 'grid' }: { slug: string; title: string; size?: 'featured' | 'grid' }) {

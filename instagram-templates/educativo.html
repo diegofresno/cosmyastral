@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:         #18100a;
+      --gold:       #c49a3c;
+      --cream:      #f3e8d3;
+      --cream-dim:  #b09a7c;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+    }
+
+    .post {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 90% 70% at 80% 50%, #2c1c0c 0%, transparent 55%),
+        radial-gradient(ellipse 60% 60% at 10% 90%, #221408 0%, transparent 60%),
+        #18100a;
+    }
+
+    /* ── ELEMENTO TIPOGRÁFICO DE FONDO: número gigante ── */
+    /* ══ EDITAR: cambia el número aquí para que coincida con .main-visual ══ */
+    .bg-number {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%) rotate(6deg);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 560px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      opacity: 0.10;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: -20px;
+    }
+
+    /* Barra vertical de acento */
+    .accent-bar {
+      position: absolute;
+      left: 76px;
+      top: 88px;
+      bottom: 88px;
+      width: 1px;
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        var(--gold) 15%,
+        var(--gold) 85%,
+        transparent 100%);
+      opacity: 0.35;
+    }
+
+    /* Bloque de contenido — izquierda */
+    .content {
+      position: absolute;
+      left: 108px;
+      right: 340px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ══ EDITAR: categoría ══ */
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.9;
+      margin-bottom: 48px;
+    }
+
+    /* ══ EDITAR: número o símbolo principal ══ */
+    .main-visual {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 168px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 0.88;
+      margin-bottom: 24px;
+      letter-spacing: -4px;
+    }
+
+    /* ══ EDITAR: nombre del concepto ══ */
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 32px;
+      line-height: 1.2;
+    }
+
+    .rule {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0.6;
+    }
+
+    /* ══ EDITAR: descripción (2-3 líneas) ══ */
+    .body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 21px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream-dim);
+      line-height: 1.7;
+      margin-bottom: 52px;
+    }
+
+    /* ══ EDITAR: texto CTA ══ */
+    .cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.75;
+    }
+
+    /* Marca — bottom left dentro del bloque */
+    .brand {
+      position: absolute;
+      bottom: 52px;
+      left: 108px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .brand-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      opacity: 0.45;
+    }
+
+    /* Viñeta suave */
+    .post::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.55) 100%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+
+    <!-- Número de fondo (elemento textural) -->
+    <!-- ══ EDITAR: cambia este número ══ -->
+    <div class="bg-number">7</div>
+
+    <!-- Línea de acento vertical -->
+    <div class="accent-bar"></div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+
+      <!-- ══ EDITAR: etiqueta de categoría ══ -->
+      <div class="label">Numerología · Camino de Vida</div>
+
+      <!-- ══ EDITAR: número/símbolo ══ -->
+      <div class="main-visual">7</div>
+
+      <!-- ══ EDITAR: nombre del concepto ══ -->
+      <div class="title">El Buscador</div>
+
+      <div class="rule"></div>
+
+      <!-- ══ EDITAR: descripción (2-3 líneas en italic) ══ -->
+      <p class="body">La mente que nunca descansa.<br>Tu misión en esta vida<br>es comprender, no acumular.</p>
+
+      <!-- ══ EDITAR: CTA ══ -->
+      <div class="cta">¿Cuál es el tuyo? → cosmyastral.com</div>
+
+    </div>
+
+    <!-- Marca -->
+    <div class="brand">
+      <svg width="13" height="13" viewBox="0 0 32 32">
+        <path d="M16 5 L17.4 12.2 L24 10 L19.8 15.2 L24 16 L19.8 16.8 L24 22 L17.4 19.8 L16 27 L14.6 19.8 L8 22 L12.2 16.8 L8 16 L12.2 15.2 L8 10 L14.6 12.2 Z" fill="#c49a3c"/>
+      </svg>
+      <div class="brand-name">Cosmyastral</div>
+    </div>
+
+  </div>
+</body>
+</html>

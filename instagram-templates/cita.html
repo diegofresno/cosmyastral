@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold:       #c49a3c;
+      --cream:      #f3e8d3;
+      --cream-dim:  #a89070;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+    }
+
+    .post {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      /* Fondo: foto de luna de Unsplash con overlay oscuro */
+      background:
+        linear-gradient(to bottom,
+          rgba(18, 10, 4, 0.55) 0%,
+          rgba(10, 6, 2, 0.80) 100%),
+        url('https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=1080&q=80') center/cover no-repeat;
+    }
+
+    /* Halo dorado suave en la parte superior (donde estaría la luna) */
+    .post::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(196, 154, 60, 0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 100% 50% at 50% 100%, rgba(0,0,0,0.45) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Marca de comillas decorativa — elemento de fondo */
+    .deco-quote {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 280px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      opacity: 0.06;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Contenido */
+    .content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 96px 100px 108px;
+    }
+
+    /* Icono de apertura */
+    .open-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 72px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 0.7;
+      margin-bottom: 32px;
+      opacity: 0.75;
+      display: block;
+    }
+
+    /* ══ EDITAR: texto de la cita ══ */
+    .quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.4;
+      margin-bottom: 48px;
+      letter-spacing: 0.2px;
+      max-width: 880px;
+    }
+
+    /* Separador */
+    .sep {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .sep-line {
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+    .sep-star {
+      opacity: 0.55;
+    }
+
+    /* ══ EDITAR: fuente/atribución ══ */
+    .attribution {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      margin-bottom: 6px;
+    }
+
+    /* ══ EDITAR: subtítulo de atribución (opcional) ══ */
+    .attribution-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--cream-dim);
+      opacity: 0.65;
+    }
+
+    /* Marca — bottom right */
+    .brand {
+      position: absolute;
+      bottom: 52px;
+      right: 72px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .brand-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      opacity: 0.45;
+    }
+  </style>
+</head>
+<body>
+  <div class="post">
+
+    <!-- Comilla decorativa de fondo -->
+    <div class="deco-quote">"</div>
+
+    <div class="content">
+
+      <!-- Comilla de apertura visible -->
+      <span class="open-mark">"</span>
+
+      <!-- ══ EDITAR: la cita ══ -->
+      <p class="quote">No viniste a este mundo a encajar.<br>Viniste a descubrir por qué<br>ningún molde era para ti.</p>
+
+      <div class="sep">
+        <div class="sep-line"></div>
+        <svg class="sep-star" width="12" height="12" viewBox="0 0 32 32">
+          <path d="M16 5 L17.4 12.2 L24 10 L19.8 15.2 L24 16 L19.8 16.8 L24 22 L17.4 19.8 L16 27 L14.6 19.8 L8 22 L12.2 16.8 L8 16 L12.2 15.2 L8 10 L14.6 12.2 Z" fill="#c49a3c"/>
+        </svg>
+        <div class="sep-line"></div>
+      </div>
+
+      <!-- ══ EDITAR: atribución ══ -->
+      <div class="attribution">Carta natal</div>
+      <!-- ══ EDITAR: subtítulo (o borrar si no aplica) ══ -->
+      <div class="attribution-sub">El mensaje de tu Sol natal</div>
+
+    </div>
+
+    <!-- Marca -->
+    <div class="brand">
+      <svg width="13" height="13" viewBox="0 0 32 32">
+        <path d="M16 5 L17.4 12.2 L24 10 L19.8 15.2 L24 16 L19.8 16.8 L24 22 L17.4 19.8 L16 27 L14.6 19.8 L8 22 L12.2 16.8 L8 16 L12.2 15.2 L8 10 L14.6 12.2 Z" fill="#c49a3c"/>
+      </svg>
+      <div class="brand-name">Cosmyastral</div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@cosmyastral — Carta Natal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #020209;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    /* Wrapper que escala 1080×1920 al tamaño de la ventana */
+    .scale-wrapper {
+      width: 1080px;
+      height: 1920px;
+      transform-origin: top center;
+    }
+
+    /* ── Frame ── */
+    .frame {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background-image: url('./img-fondo-cosmico.png');
+      background-size: cover;
+      background-position: top center;
+    }
+
+    /* Degradado oscuro sobre la mitad inferior para legibilidad del texto */
+    .text-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 28%,
+        rgba(8, 8, 22, 0.45) 48%,
+        rgba(8, 8, 22, 0.78) 65%,
+        rgba(8, 8, 22, 0.92) 82%,
+        rgba(8, 8, 22, 0.97) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Viñeta perimetral */
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse 90% 90% at 50% 50%,
+        transparent 45%,
+        rgba(0, 0, 0, 0.50) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* ── Content column ── */
+    .content {
+      position: absolute;
+      top: 680px;
+      left: 80px;
+      right: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Hilo dorado vertical */
+    .sep-line {
+      width: 1px;
+      height: 64px;
+      background: linear-gradient(to bottom, transparent, rgba(201, 168, 76, 0.70), transparent);
+      margin-bottom: 58px;
+      animation: fadeIn 10s ease-in-out infinite both;
+    }
+
+    /* ── Headline ── */
+    .headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 88px;
+      line-height: 1.12;
+      text-align: center;
+      color: #f5f0e8;
+      letter-spacing: -0.015em;
+      margin-bottom: 50px;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.8), 0 0 80px rgba(0,0,0,0.5);
+      animation: slideUp 10s cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    }
+
+    /* ── Subtitle ── */
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 1.55;
+      text-align: center;
+      color: rgba(245, 240, 232, 0.62);
+      letter-spacing: 0.04em;
+      margin-bottom: 80px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+      animation: subtitleIn 10s ease-in-out infinite both;
+    }
+
+    /* ── Feature list ── */
+    .features {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      margin-bottom: 96px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      line-height: 1;
+      color: #c9a84c;
+      width: 44px;
+      text-align: center;
+      flex-shrink: 0;
+      opacity: 0.90;
+    }
+
+    .feature-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.4;
+      color: rgba(245, 240, 232, 0.85);
+      letter-spacing: 0.015em;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.9);
+    }
+
+    .feature:nth-child(1) { animation: featIn1 10s ease-in-out infinite both; }
+    .feature:nth-child(2) { animation: featIn2 10s ease-in-out infinite both; }
+    .feature:nth-child(3) { animation: featIn3 10s ease-in-out infinite both; }
+
+    /* ── CTA ── */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 74px;
+      border: 1px solid rgba(201, 168, 76, 0.68);
+      color: #c9a84c;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 21px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: rgba(201, 168, 76, 0.08);
+      cursor: default;
+      animation: ctaIn 10s ease-in-out infinite both;
+    }
+
+    /* ── Handle ── */
+    .handle {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 21px;
+      letter-spacing: 0.26em;
+      text-transform: lowercase;
+      color: rgba(245, 240, 232, 0.38);
+      white-space: nowrap;
+      animation: handleIn 10s ease-in-out infinite both;
+    }
+
+    /* ════════════ KEYFRAMES ════════════
+       10s total: 8s secuencia + 2s hold
+       1s=10%  2.5s=25%  3.5s=35%
+       5s=50%  6.5s=65%  8s=80%
+    ════════════════════════════════════ */
+
+    @keyframes slideUp {
+      0%, 10% { opacity: 0; transform: translateY(50px); }
+      25%     { opacity: 1; transform: translateY(0); }
+      100%    { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0%, 10% { opacity: 0; }
+      25%     { opacity: 1; }
+      100%    { opacity: 1; }
+    }
+    @keyframes subtitleIn {
+      0%, 25% { opacity: 0; }
+      35%     { opacity: 1; }
+      100%    { opacity: 1; }
+    }
+    @keyframes featIn1 {
+      0%, 35% { opacity: 0; transform: translateY(18px); }
+      42%     { opacity: 1; transform: translateY(0); }
+      100%    { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes featIn2 {
+      0%, 39% { opacity: 0; transform: translateY(18px); }
+      46%     { opacity: 1; transform: translateY(0); }
+      100%    { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes featIn3 {
+      0%, 43% { opacity: 0; transform: translateY(18px); }
+      50%     { opacity: 1; transform: translateY(0); }
+      100%    { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes ctaIn {
+      0%, 50% { opacity: 0; }
+      65%     { opacity: 1; }
+      100%    { opacity: 1; }
+    }
+    @keyframes handleIn {
+      0%, 65% { opacity: 0; }
+      80%     { opacity: 1; }
+      100%    { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+<div class="scale-wrapper" id="scaleWrapper">
+  <div class="frame">
+    <div class="text-overlay"></div>
+    <div class="vignette"></div>
+
+    <div class="content">
+      <div class="sep-line"></div>
+      <h1 class="headline">Tu carta natal<br>revela quién eres<br>de verdad</h1>
+      <p class="subtitle">Interpretación personalizada · IA&nbsp;+ revisión de astrólogas</p>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">☉</span>
+          <span class="feature-text">Tu Sol, Luna y Ascendente</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">♃</span>
+          <span class="feature-text">Todos tus planetas y casas</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✦</span>
+          <span class="feature-text">Guía para tu año personal</span>
+        </div>
+      </div>
+      <div class="cta">Solicita tu estudio →</div>
+    </div>
+
+    <div class="handle">@cosmyastral</div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const wrapper = document.getElementById('scaleWrapper');
+    function fitToWindow() {
+      const scaleX = window.innerWidth / 1080;
+      const scaleY = window.innerHeight / 1920;
+      const scale = Math.min(scaleX, scaleY);
+      wrapper.style.transform = 'scale(' + scale + ')';
+      // Centrar horizontalmente cuando la escala no ocupa todo el ancho
+      const offsetX = (window.innerWidth - 1080 * scale) / 2;
+      wrapper.style.marginLeft = offsetX + 'px';
+    }
+    fitToWindow();
+    window.addEventListener('resize', fitToWindow);
+  }());
+</script>
+</body>
+</html>

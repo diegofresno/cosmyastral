@@ -14,6 +14,20 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'luna-en-piscis-carta-natal',
+    title: 'Luna en Piscis en la carta natal: empatía sin límites y creatividad profunda',
+    excerpt: 'La Luna en Piscis es la posición lunar de la empatía sin fronteras. Siente el mundo entero como propio, crea desde la intuición y necesita aprender a distinguir lo suyo de lo ajeno. Qué significa en tu carta.',
+    category: 'Astrología',
+    date: '2026-06-26',
+  },
+  {
+    slug: 'luna-en-sagitario-carta-natal',
+    title: 'Luna en Sagitario en la carta natal: optimismo, libertad y la huida del dolor',
+    excerpt: 'La Luna en Sagitario necesita espacio, aventura y significado para sentirse viva. El optimismo es genuino —y a veces también un mecanismo para no quedarse con lo que duele. Qué significa en tu carta.',
+    category: 'Astrología',
+    date: '2026-06-26',
+  },
+  {
     slug: 'hora-espejo-11-11',
     title: 'Hora espejo 11:11: qué son las horas espejo y las 24 que existen',
     excerpt: 'Ver el 11:11, el 22:22 o el 01:01 en el reloj no es casualidad —al menos no del todo. Qué son las horas espejo, cuántas hay, qué dice la numerología de cada una y por qué el 11:11 encabeza la lista.',
@@ -43,6 +57,13 @@ export const POSTS = [
     excerpt: 'La luna llena marca el clímax del ciclo lunar. Te explicamos qué significa astrológicamente, cómo afecta emocionalmente y cuándo caen las lunas llenas de 2026.',
     category: 'Ciclos lunares',
     date: '2026-05-15',
+  },
+  {
+    slug: 'luna-nueva-julio-2026',
+    title: 'Luna nueva de julio 2026 en Cáncer: semilla emocional en el domicilio de la Luna',
+    excerpt: 'El 14 de julio de 2026 la Luna nueva ocurre en Cáncer a las 12:45h hora España. Es la luna nueva más poderosa del año para intenciones emocionales: la Luna está en su propio domicilio.',
+    category: 'Ciclos lunares',
+    date: '2026-06-24',
   },
   {
     slug: 'luna-en-capricornio-carta-natal',

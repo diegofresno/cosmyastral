@@ -13,10 +13,13 @@ const STATIC_PAGES: { url: string; lastMod: string; priority: number; changefreq
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'hora-espejo-11-11',                       lastMod: '2026-06-19' },
+  { slug: 'luna-llena-julio-2026',                   lastMod: '2026-06-17' },
   { slug: 'carta-natal-gratis-explicada',           lastMod: '2026-06-09' },
   { slug: 'luna-llena-significado-astrologico',      lastMod: '2026-06-09' },
   { slug: 'luna-en-escorpio-carta-natal',            lastMod: '2026-06-11' },
-  { slug: '11-11-significado-espiritual',            lastMod: '2026-06-11' },
+  { slug: 'que-significa-11-11',                     lastMod: '2026-06-15' },
+  { slug: '11-11-significado-espiritual',            lastMod: '2026-06-15' },
   { slug: 'camino-de-vida-11-numero-maestro',        lastMod: '2026-06-11' },
   { slug: 'revolucion-solar-que-es-como-calcularla', lastMod: '2026-06-11' },
 ];

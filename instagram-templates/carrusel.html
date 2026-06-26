@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:         #18100a;
+      --gold:       #c49a3c;
+      --cream:      #f3e8d3;
+      --cream-dim:  #a89070;
+    }
+
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════
+       MODO: cambia <body class=""> a
+         mode-cover   → portada del carrusel
+         mode-content → slide de contenido
+         mode-cta     → slide final con CTA
+       ═══════════════════════════════════════ */
+
+    .post {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, #241608 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 0% 100%, #1e1208 0%, transparent 55%),
+        #18100a;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ──────────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 88px 0 108px;
+      flex-shrink: 0;
+    }
+
+    /* ══ EDITAR: título de la serie ══ */
+    .series-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+
+    /* ══ EDITAR: número de slide (e.g. "03 / 05") ══ */
+    .slide-counter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 2px;
+      color: var(--cream-dim);
+      opacity: 0.45;
+    }
+
+    /* ─── SEPARADOR ──────────────────────── */
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(196,154,60,0.5) 8%,
+        rgba(196,154,60,0.25) 92%,
+        transparent 100%);
+      margin: 22px 52px 0;
+      flex-shrink: 0;
+    }
+
+    /* ─── ÁREA DE CONTENIDO ──────────────── */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 44px 88px 44px 108px;
+    }
+
+    /* ══ EDITAR: título del slide ══ */
+    .slide-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 66px;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.08;
+      margin-bottom: 44px;
+    }
+    .slide-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* ══ EDITAR: contenido (párrafos o bullets) ══ */
+    .slide-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--cream-dim);
+      line-height: 1.65;
+    }
+    .slide-body p { margin-bottom: 18px; }
+    .slide-body p:last-child { margin-bottom: 0; }
+
+    .slide-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .slide-body ul li {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .slide-body ul li::before {
+      content: '—';
+      color: var(--gold);
+      font-size: 20px;
+      margin-top: 4px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ─── FOOTER ──────────────────────────── */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 88px 48px 108px;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .brand-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      opacity: 0.42;
+    }
+
+    /* ══ EDITAR: texto de navegación ══ */
+    .nav-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+    }
+
+    /* ─── MODO COVER ──────────────────────── */
+    body.mode-cover .main {
+      justify-content: flex-end;
+      padding-bottom: 64px;
+    }
+    body.mode-cover .slide-title {
+      font-size: 84px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      line-height: 1.0;
+    }
+    body.mode-cover .cover-intro {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    body.mode-cover .cover-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--cream-dim);
+      opacity: 0.55;
+      margin-top: 16px;
+    }
+    body.mode-cover .cover-star {
+      position: absolute;
+      top: 48px;
+      right: 72px;
+      opacity: 0.08;
+    }
+
+    /* ─── MODO CTA ────────────────────────── */
+    body.mode-cta .main {
+      align-items: flex-start;
+      text-align: left;
+    }
+    body.mode-cta .slide-title {
+      font-size: 60px;
+      margin-bottom: 16px;
+    }
+    body.mode-cta .cta-url {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-top: 36px;
+      text-transform: lowercase;
+    }
+    body.mode-cta .cta-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--cream-dim);
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    /* ─── OCULTAR por defecto ─────────────── */
+    .cover-star,
+    .cover-intro,
+    .cover-count,
+    .cta-url,
+    .cta-price { display: none; }
+
+    body.mode-cover .cover-star  { display: block; }
+    body.mode-cover .cover-intro { display: block; }
+    body.mode-cover .cover-count { display: block; }
+    body.mode-cta   .cta-url     { display: block; }
+    body.mode-cta   .cta-price   { display: block; }
+
+    /* Viñeta */
+    .post::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.38) 100%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<!-- ══ EDITAR: cambiar class a mode-cover / mode-content / mode-cta ══ -->
+<body class="mode-content">
+  <div class="post">
+
+    <!-- PORTADA: star decorativa (solo visible en mode-cover) -->
+    <div class="cover-star">
+      <svg width="520" height="520" viewBox="0 0 32 32">
+        <path d="M16 5 L17.4 12.2 L24 10 L19.8 15.2 L24 16 L19.8 16.8 L24 22 L17.4 19.8 L16 27 L14.6 19.8 L8 22 L12.2 16.8 L8 16 L12.2 15.2 L8 10 L14.6 12.2 Z" fill="#c49a3c"/>
+      </svg>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <!-- ══ EDITAR: título de la serie ══ -->
+      <div class="series-label">Tu carta natal · Guía completa</div>
+      <!-- ══ EDITAR: número de slide ══ -->
+      <div class="slide-counter">02 / 05</div>
+    </div>
+    <div class="gold-line"></div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- Solo en mode-cover -->
+      <div class="cover-intro">Descubre lo que dicen los astros</div>
+
+      <!-- ══ EDITAR: título del slide ══ -->
+      <div class="slide-title">El <em>Ascendente</em><br>no es tu máscara.<br>Es tu primer paso.</div>
+
+      <!-- ══ EDITAR: contenido ══ -->
+      <div class="slide-body">
+        <ul>
+          <li>El Ascendente es el signo que salía por el horizonte cuando naciste.</li>
+          <li>Representa cómo te percibes a ti mismo y cómo te perciben los demás.</li>
+          <li>Cambia cada 2 horas: por eso la hora de nacimiento importa tanto.</li>
+        </ul>
+      </div>
+
+      <!-- Solo en mode-cover -->
+      <div class="cover-count">5 cosas que cambiarán cómo lees tu carta</div>
+
+      <!-- Solo en mode-cta -->
+      <div class="cta-url">cosmyastral.com</div>
+      <div class="cta-price">Carta natal interpretada · desde 29€</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="gold-line" style="margin-top:0;"></div>
+    <div class="footer">
+      <div class="brand">
+        <svg width="13" height="13" viewBox="0 0 32 32">
+          <path d="M16 5 L17.4 12.2 L24 10 L19.8 15.2 L24 16 L19.8 16.8 L24 22 L17.4 19.8 L16 27 L14.6 19.8 L8 22 L12.2 16.8 L8 16 L12.2 15.2 L8 10 L14.6 12.2 Z" fill="#c49a3c"/>
+        </svg>
+        <div class="brand-name">Cosmyastral</div>
+      </div>
+      <!-- ══ EDITAR: texto de navegación ══ -->
+      <div class="nav-text">Desliza →</div>
+    </div>
+
+  </div>
+</body>
+</html>
