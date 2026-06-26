@@ -26,8 +26,8 @@ const HERO_IMAGES: Record<string, string> = {
   'luna-llena-julio-2026':                   '/blog/blog-luna-julio-2026.png',
   'luna-nueva-julio-2026':                   '/blog/blog-luna-julio-2026.png',
   'luna-en-capricornio-carta-natal':         '/blog/blog-luna-capricornio.png',
-  'luna-en-piscis-carta-natal':              '/blog/blog-luna-piscis.png',
-  'luna-en-sagitario-carta-natal':           '/blog/blog-luna-sagitario.png',
+  'luna-en-piscis':                          '/blog/blog-luna-piscis.png',
+  'luna-en-sagitario':                       '/blog/blog-luna-sagitario.png',
   'hora-espejo-11-11':                       '/blog/blog-hora-espejo-1111.png',
 };
 

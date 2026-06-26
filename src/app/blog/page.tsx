@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
-    slug: 'luna-en-piscis-carta-natal',
+    slug: 'luna-en-piscis',
     title: 'Luna en Piscis en la carta natal: empatía sin límites y creatividad profunda',
     excerpt: 'La Luna en Piscis es la posición lunar de la empatía sin fronteras. Siente el mundo entero como propio, crea desde la intuición y necesita aprender a distinguir lo suyo de lo ajeno. Qué significa en tu carta.',
     category: 'Astrología',
     date: '2026-06-26',
   },
   {
-    slug: 'luna-en-sagitario-carta-natal',
+    slug: 'luna-en-sagitario',
     title: 'Luna en Sagitario en la carta natal: optimismo, libertad y la huida del dolor',
     excerpt: 'La Luna en Sagitario necesita espacio, aventura y significado para sentirse viva. El optimismo es genuino —y a veces también un mecanismo para no quedarse con lo que duele. Qué significa en tu carta.',
     category: 'Astrología',

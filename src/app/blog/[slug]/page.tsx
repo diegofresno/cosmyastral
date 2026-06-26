@@ -893,7 +893,7 @@ const ARTICLES: Record<string, ArticleData> = {
     },
   },
 
-  'luna-en-piscis-carta-natal': {
+  'luna-en-piscis': {
     eyebrow: 'Astrología · Luna natal · Signo Piscis',
     h1: 'Luna en Piscis',
     lead: 'La posición lunar de la empatía sin límites. Una persona que siente el mundo entero como propio y necesita aprender que no puede absorberlo todo. Con una creatividad y una intuición que pocas posiciones lunares igualan.',
@@ -991,7 +991,7 @@ const ARTICLES: Record<string, ArticleData> = {
     },
   },
 
-  'luna-en-sagitario-carta-natal': {
+  'luna-en-sagitario': {
     eyebrow: 'Astrología · Luna natal · Signo Sagitario',
     h1: 'Luna en Sagitario',
     lead: 'La posición lunar del optimismo como mecanismo emocional. Una persona que necesita espacio, aventura y significado para sentirse viva —y que usa el humor y el movimiento para mantener a raya lo que duele.',
@@ -1285,8 +1285,8 @@ const HERO_IMAGES: Record<string, string> = {
   'luna-llena-significado-astrologico':    '/blog/blog-luna-llena.png',
   'luna-en-escorpio-carta-natal':          '/blog/blog-luna-escorpio.png',
   'luna-en-capricornio-carta-natal':       '/blog/blog-luna-capricornio.png',
-  'luna-en-piscis-carta-natal':            '/blog/blog-luna-piscis.png',
-  'luna-en-sagitario-carta-natal':         '/blog/blog-luna-sagitario.png',
+  'luna-en-piscis':                        '/blog/blog-luna-piscis.png',
+  'luna-en-sagitario':                     '/blog/blog-luna-sagitario.png',
   'que-significa-11-11':                   '/blog/blog-11-11.png',
   '11-11-significado-espiritual':          '/blog/blog-11-11.png',
   'camino-de-vida-11-numero-maestro':      '/blog/blog-camino-11.png',
