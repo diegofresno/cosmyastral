@@ -14,6 +14,34 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'venus-en-escorpio',
+    title: 'Venus en Escorpio en la carta natal: el amor o nada',
+    excerpt: 'Venus en detrimento en Escorpio no es Venus roto —es Venus que ama con una intensidad que la mayor parte del mundo no está preparada para sostener. Significado natal, la sombra de los celos, patrones de infancia y famosos con esta posición.',
+    category: 'Astrología',
+    date: '2026-07-06',
+  },
+  {
+    slug: 'venus-en-virgo',
+    title: 'Venus en Virgo en la carta natal: el amor que se construye',
+    excerpt: 'Venus en caída en Virgo no es Venus debilitado —es Venus que aprendió que el amor no se declara, se hace. Significado natal, el lenguaje único de la crítica como cuidado, patrones de infancia y cómo afecta el tránsito de julio a agosto 2026.',
+    category: 'Astrología',
+    date: '2026-07-03',
+  },
+  {
+    slug: 'ascendente-en-escorpio',
+    title: 'Ascendente en Escorpio: significado, personalidad y propósito de vida',
+    excerpt: 'El Ascendente en Escorpio llega al mundo con una presencia magnética que no necesita esfuerzo. Cómo te perciben, qué atrae el Descendente en Tauro, por qué el MC en Leo marca la vocación y los patrones de infancia que explican la desconfianza escorpiana.',
+    category: 'Astrología',
+    date: '2026-07-01',
+  },
+  {
+    slug: 'ascendente-en-virgo',
+    title: 'Ascendente en Virgo: significado, personalidad y propósito de vida',
+    excerpt: 'El Ascendente en Virgo llega al mundo con calma, precisión y servicio. Cómo te perciben los demás, por qué Mercurio lo rige todo, qué atrae el Descendente en Piscis y cuál es el propósito de vida de este ascendente.',
+    category: 'Astrología',
+    date: '2026-06-29',
+  },
+  {
     slug: 'luna-en-piscis',
     title: 'Luna en Piscis en la carta natal: empatía sin límites y creatividad profunda',
     excerpt: 'La Luna en Piscis es la posición lunar de la empatía sin fronteras. Siente el mundo entero como propio, crea desde la intuición y necesita aprender a distinguir lo suyo de lo ajeno. Qué significa en tu carta.',

@@ -29,6 +29,10 @@ const HERO_IMAGES: Record<string, string> = {
   'luna-en-piscis':                          '/blog/blog-luna-piscis.png',
   'luna-en-sagitario':                       '/blog/blog-luna-sagitario.png',
   'hora-espejo-11-11':                       '/blog/blog-hora-espejo-1111.png',
+  'ascendente-en-virgo':                     '/blog/blog-ascendente-virgo.png',
+  'ascendente-en-escorpio':                  '/blog/blog-ascendente-escorpio.png',
+  'venus-en-virgo':                          '/blog/blog-venus-virgo.png',
+  'venus-en-escorpio':                       '/blog/blog-venus-escorpio.png',
 };
 
 function PostImage({ slug, title, size = 'grid' }: { slug: string; title: string; size?: 'featured' | 'grid' }) {
