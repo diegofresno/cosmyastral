@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
+      // www → non-www (301 permanente)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.cosmyastral.com" }],
+        destination: "https://cosmyastral.com/:path*",
+        permanent: true,
+      },
+      // Redirects de slugs renombrados
       {
         source: "/blog/luna-en-piscis-carta-natal/",
         destination: "/blog/luna-en-piscis/",
