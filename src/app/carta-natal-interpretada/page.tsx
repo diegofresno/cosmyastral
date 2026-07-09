@@ -1,6 +1,7 @@
 import { headers } from 'next/headers';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
 
@@ -164,23 +165,35 @@ export default async function CartaNatalInterpretadaPage() {
       ]} />
 
       {/* ── HERO ── */}
-      <section style={{ background: 'var(--bg)', padding: 'clamp(56px,8vw,96px) 32px 48px', textAlign: 'center' }}>
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-          <p className="eyebrow">✦ Estudio personalizado en PDF ✦</p>
-          <h1 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(2.4rem,5.5vw,4rem)', lineHeight: 1.08, color: 'var(--ink)', marginBottom: '24px', letterSpacing: '-.015em' }}>
-            Tu carta natal,<br />
-            <em style={{ fontStyle: 'italic', color: 'var(--brown)' }}>interpretada en profundidad</em>
-          </h1>
-          <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1.18rem', color: 'var(--ink-soft)', lineHeight: 1.65, margin: '0 auto 36px', maxWidth: '560px' }}>
-            Más de 10.000 palabras de interpretación narrativa personalizada. Tu Sol, Luna, Ascendente y todos los planetas explicados en un español cuidado, en PDF, para leer y releer.
-          </p>
-          <Link href="/pedir/carta-natal/" className="btn btn-accent btn-xl">
-            Quiero mi carta natal →
-          </Link>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '20px', flexWrap: 'wrap' }}>
-            {['✦ Pago 100% seguro', '✦ Entrega en 24-48 horas', '✦ 7 días de garantía'].map(t => (
-              <span key={t} style={{ fontFamily: 'var(--font-inter)', fontSize: '0.82rem', color: 'var(--ink-mute)' }}>{t}</span>
-            ))}
+      <section style={{ background: 'var(--bg)', padding: 'clamp(48px,7vw,80px) 32px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '48px', alignItems: 'center' }}>
+          <div>
+            <p className="eyebrow">✦ Estudio personalizado en PDF ✦</p>
+            <h1 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(2.4rem,5vw,3.8rem)', lineHeight: 1.08, color: 'var(--ink)', marginBottom: '24px', letterSpacing: '-.015em' }}>
+              Tu carta natal,<br />
+              <em style={{ fontStyle: 'italic', color: 'var(--brown)' }}>interpretada en profundidad</em>
+            </h1>
+            <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1.15rem', color: 'var(--ink-soft)', lineHeight: 1.65, marginBottom: '36px', maxWidth: '480px' }}>
+              Más de 10.000 palabras de interpretación narrativa personalizada. Tu Sol, Luna, Ascendente y todos los planetas explicados en un español cuidado, en PDF, para leer y releer.
+            </p>
+            <Link href="/pedir/carta-natal/" className="btn btn-accent btn-xl">
+              Quiero mi carta natal →
+            </Link>
+            <div style={{ display: 'flex', gap: '20px', marginTop: '20px', flexWrap: 'wrap' }}>
+              {['✦ Pago 100% seguro', '✦ Entrega en 24-48 horas', '✦ 7 días de garantía'].map(t => (
+                <span key={t} style={{ fontFamily: 'var(--font-inter)', fontSize: '0.82rem', color: 'var(--ink-mute)' }}>{t}</span>
+              ))}
+            </div>
+          </div>
+          <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 12px 40px rgba(61,43,31,.18)' }}>
+            <Image
+              src="/landing-carta-natal-hero.png"
+              alt="Manos sosteniendo una rueda zodiacal iluminada con los signos del zodiaco"
+              width={2560}
+              height={1664}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -334,9 +347,18 @@ export default async function CartaNatalInterpretadaPage() {
       <section style={{ background: 'var(--bg)', padding: 'clamp(56px,7vw,80px) 32px' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <p className="eyebrow" style={{ textAlign: 'center' }}>Resumen de la oferta</p>
-          <h2 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', lineHeight: 1.18, color: 'var(--ink)', marginBottom: '40px', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', lineHeight: 1.18, color: 'var(--ink)', marginBottom: '32px', textAlign: 'center' }}>
             Esto es todo lo que te llevas.
           </h2>
+          <div style={{ borderRadius: '14px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(61,43,31,.15)', marginBottom: '28px' }}>
+            <Image
+              src="/landing-carta-natal-mockup.png"
+              alt="Estudio de carta natal impreso sobre una mesa de madera oscura con esfera de cristal y flores secas"
+              width={2432}
+              height={1792}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+          </div>
           <div style={{ background: 'var(--bg-warm)', border: '1px solid var(--line)', borderRadius: '12px', padding: '36px 32px' }}>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '32px' }}>
               {[
