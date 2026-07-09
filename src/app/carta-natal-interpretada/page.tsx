@@ -458,19 +458,24 @@ export default async function CartaNatalInterpretadaPage() {
       </section>
 
       {/* ── CTA CIERRE ── */}
-      <section style={{ background: 'var(--ink)', padding: 'clamp(72px,10vw,120px) 32px', textAlign: 'center' }}>
-        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Última llamada</p>
-          <h2 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(2rem,4.5vw,3.6rem)', lineHeight: 1.12, color: 'var(--bg)', marginBottom: '18px' }}>
-            Tu carta ya está escrita en el cielo.
+      <section style={{ position: 'relative', padding: 'clamp(80px,11vw,140px) 32px', textAlign: 'center', overflow: 'hidden' }}>
+        {/* fondo */}
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(/landing-carta-natal-hero.png)', backgroundSize: 'cover', backgroundPosition: 'center 40%', zIndex: 0 }} />
+        {/* overlay */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(14,7,3,.82) 0%, rgba(14,7,3,.90) 100%)', zIndex: 1 }} />
+        {/* contenido */}
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', margin: '0 auto' }}>
+          <p className="eyebrow" style={{ color: 'var(--gold)' }}>Una última cosa</p>
+          <h2 style={{ fontFamily: 'var(--font-garamond)', fontWeight: 400, fontSize: 'clamp(2rem,4.5vw,3.6rem)', lineHeight: 1.12, color: 'var(--bg)', marginBottom: '20px' }}>
+            Naciste con un mapa.<br />La mayoría nunca llega a leerlo.
           </h2>
-          <p style={{ fontFamily: 'var(--font-garamond)', fontStyle: 'italic', fontSize: '1.2rem', color: 'rgba(247,238,219,.75)', marginBottom: '36px', lineHeight: 1.6 }}>
-            Solo falta que la leas.
+          <p style={{ fontFamily: 'var(--font-garamond)', fontStyle: 'italic', fontSize: '1.2rem', color: 'rgba(247,238,219,.72)', marginBottom: '40px', lineHeight: 1.65 }}>
+            El tuyo tiene más de 10.000 palabras escritas sobre el segundo exacto en que llegaste al mundo. Está a 48 horas de distancia.
           </p>
           <Link href="/pedir/carta-natal/" className="btn btn-gold btn-xl">
-            Quiero mi carta natal →
+            Pedir mi carta natal →
           </Link>
-          <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.82rem', color: 'rgba(247,238,219,.4)', marginTop: '20px' }}>
+          <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.82rem', color: 'rgba(247,238,219,.35)', marginTop: '20px' }}>
             Pago seguro · Entrega en 24-48 horas · 7 días de garantía
           </p>
         </div>
