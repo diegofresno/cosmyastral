@@ -33,6 +33,8 @@ const HERO_IMAGES: Record<string, string> = {
   'ascendente-en-escorpio':                  '/blog/blog-ascendente-escorpio.png',
   'venus-en-virgo':                          '/blog/blog-venus-virgo.png',
   'venus-en-escorpio':                       '/blog/blog-venus-escorpio.png',
+  'venus-en-aries':                          '/blog/blog-venus-aries.png',
+  'venus-en-geminis':                        '/blog/blog-venus-geminis.png',
 };
 
 function PostImage({ slug, title, size = 'grid' }: { slug: string; title: string; size?: 'featured' | 'grid' }) {

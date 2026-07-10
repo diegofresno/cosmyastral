@@ -14,6 +14,8 @@ const STATIC_PAGES: { url: string; lastMod: string; priority: number; changefreq
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'venus-en-geminis',                         lastMod: '2026-07-10' },
+  { slug: 'venus-en-aries',                           lastMod: '2026-07-08' },
   { slug: 'venus-en-escorpio',                       lastMod: '2026-07-06' },
   { slug: 'venus-en-virgo',                          lastMod: '2026-07-03' },
   { slug: 'ascendente-en-escorpio',                  lastMod: '2026-07-01' },

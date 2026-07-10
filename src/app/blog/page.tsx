@@ -14,6 +14,20 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'venus-en-geminis',
+    title: 'Venus en Géminis en la carta natal: el amor que necesita palabras',
+    excerpt: 'Venus en Géminis ama con la mente: se enamora de quien le hace pensar, le sorprende y le hace reír. La conversación es su mayor afrodisíaco. Infidelidad emocional, patrones de infancia, compatibilidad con todos los Venus y famosos verificados: Dylan, Pacino, Cher, Campbell y Harrison Ford.',
+    category: 'Astrología',
+    date: '2026-07-10',
+  },
+  {
+    slug: 'venus-en-aries',
+    title: 'Venus en Aries en la carta natal: el amor que actúa, no espera',
+    excerpt: 'Venus en detrimento en Aries no espera señales ni calcula tiempos. Ama rápido, conquista con franqueza y necesita aprender que el compromiso sostenido no apaga la llama — puede ser lo que la hace más real. Famosos verificados, patrones de infancia, mujer y hombre, tabla de compatibilidad.',
+    category: 'Astrología',
+    date: '2026-07-08',
+  },
+  {
     slug: 'venus-en-escorpio',
     title: 'Venus en Escorpio en la carta natal: el amor o nada',
     excerpt: 'Venus en detrimento en Escorpio no es Venus roto —es Venus que ama con una intensidad que la mayor parte del mundo no está preparada para sostener. Significado natal, la sombra de los celos, patrones de infancia y famosos con esta posición.',
