@@ -1,19 +1,24 @@
 import type { MetadataRoute } from 'next';
 
 const SITE = 'https://cosmyastral.com';
+const now = new Date();
 
-const STATIC_PAGES: { url: string; lastMod: string; priority: number; changefreq: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
-  { url: '/',             lastMod: '2026-06-10', priority: 1.0, changefreq: 'weekly'  },
-  { url: '/carta-natal/', lastMod: '2026-06-10', priority: 0.9, changefreq: 'monthly' },
-  { url: '/numerologia/', lastMod: '2026-06-10', priority: 0.9, changefreq: 'monthly' },
-  { url: '/ascendente/',  lastMod: '2026-06-10', priority: 0.8, changefreq: 'monthly' },
-  { url: '/precios/',     lastMod: '2026-06-10', priority: 0.8, changefreq: 'monthly' },
-  { url: '/blog/',        lastMod: '2026-06-26', priority: 0.7, changefreq: 'weekly'  },
-  { url: '/big-three/',   lastMod: '2026-06-27', priority: 0.8, changefreq: 'monthly' },
-  { url: '/privacidad/',  lastMod: '2026-06-10', priority: 0.3, changefreq: 'yearly'  },
+const STATIC_PAGES: { url: string; lastMod: string | Date; priority: number; changefreq: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
+  { url: '/',                          lastMod: now,          priority: 1.0, changefreq: 'weekly'  },
+  { url: '/carta-natal/',              lastMod: now,          priority: 0.9, changefreq: 'monthly' },
+  { url: '/numerologia/',              lastMod: now,          priority: 0.9, changefreq: 'monthly' },
+  { url: '/ascendente/',               lastMod: now,          priority: 0.8, changefreq: 'monthly' },
+  { url: '/carta-natal-interpretada/', lastMod: now,          priority: 0.9, changefreq: 'monthly' },
+  { url: '/precios/',                  lastMod: now,          priority: 0.8, changefreq: 'monthly' },
+  { url: '/blog/',                     lastMod: now,          priority: 0.7, changefreq: 'weekly'  },
+  { url: '/big-three/',                lastMod: '2026-06-27', priority: 0.8, changefreq: 'monthly' },
+  { url: '/privacidad/',               lastMod: '2026-06-10', priority: 0.3, changefreq: 'yearly'  },
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'venus-en-tauro',                            lastMod: '2026-07-17' },
+  { slug: 'venus-en-leo',                              lastMod: '2026-07-15' },
+  { slug: 'venus-en-capricornio',                      lastMod: '2026-07-13' },
   { slug: 'venus-en-geminis',                         lastMod: '2026-07-10' },
   { slug: 'venus-en-aries',                           lastMod: '2026-07-08' },
   { slug: 'venus-en-escorpio',                       lastMod: '2026-07-06' },
