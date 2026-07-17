@@ -14,6 +14,62 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'venus-en-piscis',
+    title: 'Venus en Piscis en la carta natal: el amor como devoción y fusión',
+    excerpt: 'Venus en Piscis está en exaltación — la posición más espiritual y devota de Venus en el zodiaco. Ama sin reservas, con una empatía que pocas Venus igualan, y cuya sombra es la idealización que ciega ante la realidad del otro. Famosos verificados: Kurt Cobain, Drew Barrymore, Jon Bon Jovi.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-acuario',
+    title: 'Venus en Acuario en la carta natal: el amor entre iguales',
+    excerpt: 'Venus en Acuario ama desde la amistad, la originalidad y una independencia que no negocia. Busca relaciones entre iguales que te hagan más tú mismo — y su sombra es la distancia emocional que evita la vulnerabilidad real. Famosos verificados: Oprah Winfrey, Mozart, Harry Styles.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-sagitario',
+    title: 'Venus en Sagitario en la carta natal: el amor como aventura compartida',
+    excerpt: 'Venus en Sagitario ama con generosidad, entusiasmo y libertad. Convierte el amor en una expedición compartida — y su sombra son las promesas que el impulso hace y que la constancia luego no siempre cumple. Famosos verificados: Tina Turner, Jimi Hendrix, Jay-Z.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-libra',
+    title: 'Venus en Libra en la carta natal: el amor como arte de la reciprocidad',
+    excerpt: 'Venus en Libra está en domicilio — ama con elegancia, busca el equilibrio en todos sus vínculos y convierte la relación en una obra de arte. Su sombra es la incapacidad para sostener el conflicto necesario. Famosos verificados: Beyoncé, Oscar Wilde, Ryan Gosling, Will Smith.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-cancer',
+    title: 'Venus en Cáncer en la carta natal: el amor como refugio',
+    excerpt: 'Venus en Cáncer ama a través del cuidado, la memoria y la creación de un hogar emocional. Su forma de querer es profunda y nutritiva — y su sombra es el apego y la dificultad para soltar. Famosos verificados: Meryl Streep, Barack Obama, Ben Affleck.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-tauro',
+    title: 'Venus en Tauro en la carta natal: el amor que construye y persiste',
+    excerpt: 'Venus en Tauro está en su domicilio — ama con lealtad, con presencia física y con la intención de que lo que empieza no se rompa. Lenguaje del amor, la sombra de la posesividad, mujer y hombre, tabla de compatibilidad con todos los Venus, el tránsito anual y famosos verificados: Prince, Salvador Dalí, Marlon Brando, Johnny Depp, Jessica Alba y Karl Marx.',
+    category: 'Astrología',
+    date: '2026-07-17',
+  },
+  {
+    slug: 'venus-en-leo',
+    title: 'Venus en Leo en la carta natal: el amor que quiere ser visto',
+    excerpt: 'Venus en Leo no ama en silencio. Ama con fanfarria, con gestos memorables y con la disposición de convertir el romance en algo que merezca ser recordado. Lenguaje del amor, la sombra del reconocimiento, mujer y hombre, tabla de compatibilidad con todos los Venus, tránsito de 2026 y famosos verificados: Madonna, Whitney Houston, Michael Jackson, Coco Chanel, Jennifer Lawrence y Pamela Anderson.',
+    category: 'Astrología',
+    date: '2026-07-15',
+  },
+  {
+    slug: 'venus-en-capricornio',
+    title: 'Venus en Capricornio en la carta natal: el amor que construye',
+    excerpt: 'Venus en Capricornio no enamora con palabras — enamora con consistencia. Aparece cuando hace falta, cumple lo que promete y construye vínculos que duran. Lenguaje del amor, la sombra de la coraza, mujer y hombre, tabla de compatibilidad con todos los Venus, evolución antes y después de los 30, y famosos verificados: Elvis, Dolly Parton, Miley Cyrus, Brad Pitt, Diane Keaton y Jim Carrey.',
+    category: 'Astrología',
+    date: '2026-07-13',
+  },
+  {
     slug: 'venus-en-geminis',
     title: 'Venus en Géminis en la carta natal: el amor que necesita palabras',
     excerpt: 'Venus en Géminis ama con la mente: se enamora de quien le hace pensar, le sorprende y le hace reír. La conversación es su mayor afrodisíaco. Infidelidad emocional, patrones de infancia, compatibilidad con todos los Venus y famosos verificados: Dylan, Pacino, Cher, Campbell y Harrison Ford.',

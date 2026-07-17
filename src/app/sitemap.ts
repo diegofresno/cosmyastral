@@ -16,6 +16,11 @@ const STATIC_PAGES: { url: string; lastMod: string | Date; priority: number; cha
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'venus-en-piscis',                            lastMod: '2026-07-17' },
+  { slug: 'venus-en-acuario',                          lastMod: '2026-07-17' },
+  { slug: 'venus-en-sagitario',                        lastMod: '2026-07-17' },
+  { slug: 'venus-en-libra',                            lastMod: '2026-07-17' },
+  { slug: 'venus-en-cancer',                           lastMod: '2026-07-17' },
   { slug: 'venus-en-tauro',                            lastMod: '2026-07-17' },
   { slug: 'venus-en-leo',                              lastMod: '2026-07-15' },
   { slug: 'venus-en-capricornio',                      lastMod: '2026-07-13' },
