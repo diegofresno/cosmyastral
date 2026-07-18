@@ -43,6 +43,14 @@ const HERO_IMAGES: Record<string, string> = {
   'venus-en-sagitario':                      '/blog/blog-venus-sagitario.png',
   'venus-en-acuario':                        '/blog/blog-venus-acuario.png',
   'venus-en-piscis':                         '/blog/blog-venus-piscis.png',
+  'luna-en-aries':                           '/blog/blog-luna-aries.png',
+  'luna-en-tauro':                           '/blog/blog-luna-tauro.png',
+  'luna-en-geminis':                         '/blog/blog-luna-geminis.png',
+  'luna-en-cancer':                          '/blog/blog-luna-cancer.png',
+  'luna-en-leo':                             '/blog/blog-luna-leo.png',
+  'luna-en-virgo':                           '/blog/blog-luna-virgo.png',
+  'luna-en-libra':                           '/blog/blog-luna-libra.png',
+  'luna-en-acuario':                         '/blog/blog-luna-acuario.png',
 };
 
 function PostImage({ slug, title, size = 'grid' }: { slug: string; title: string; size?: 'featured' | 'grid' }) {

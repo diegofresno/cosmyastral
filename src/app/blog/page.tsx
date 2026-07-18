@@ -14,6 +14,62 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'luna-en-acuario',
+    title: 'Luna en Acuario en la carta natal: independencia emocional y amor universal',
+    excerpt: 'La Luna en Acuario necesita libertad emocional para sentirse bien. Empatía hacia la humanidad, distancia en lo íntimo y una forma de querer que pocas posiciones lunares igualan. Con Princess Diana y Marilyn Monroe como ejemplos documentados.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-libra',
+    title: 'Luna en Libra en la carta natal: armonía, justicia y relaciones como ancla',
+    excerpt: 'La Luna en Libra busca el equilibrio como condición emocional básica. Diplomacia, sensibilidad estética y una necesidad real de relaciones justas. Su sombra: la evitación del conflicto necesario.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-virgo',
+    title: 'Luna en Virgo en la carta natal: el cuidado a través del servicio y el detalle',
+    excerpt: 'La Luna en Virgo ama a través de los actos concretos. Análisis emocional, perfeccionismo y una fiabilidad afectiva que pocas posiciones lunares igualan. Su reto principal: la autocrítica.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-leo',
+    title: 'Luna en Leo en la carta natal: reconocimiento, generosidad y luz propia',
+    excerpt: 'La Luna en Leo necesita brillar y ser reconocida. Generosidad dramática, liderazgo afectivo y una calidez que llena cualquier espacio. Su sombra: la necesidad de validación que nunca termina de saciarse.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-cancer',
+    title: 'Luna en Cáncer en la carta natal: domicilio, intuición y cuidado sin límites',
+    excerpt: 'La Luna en Cáncer está en domicilio: su posición más natural y más poderosa. Intuición emocional, capacidad de cuidado profundo y una memoria afectiva que guarda cada vínculo. El artículo explora también la relación con la figura materna.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-geminis',
+    title: 'Luna en Géminis en la carta natal: las emociones que necesitan ser dichas',
+    excerpt: 'La Luna en Géminis procesa el mundo interior a través de las palabras y las ideas. Agilidad emocional, curiosidad afectiva y una forma de querer que pasa siempre por la conversación. Con Barack Obama como ejemplo documentado.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-tauro',
+    title: 'Luna en Tauro en la carta natal: exaltación, estabilidad y placer sensorial',
+    excerpt: 'La Luna en Tauro está en exaltación: su posición de máxima dignidad. Estabilidad emocional, lealtad profunda y una relación con el cuerpo y los sentidos que pocas Lunas tienen. Incluye diferencias con Luna en domicilio (Cáncer) y tabla de compatibilidad.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
+    slug: 'luna-en-aries',
+    title: 'Luna en Aries en la carta natal: impulso, valentía y acción como emoción',
+    excerpt: 'La Luna en Aries siente y actúa en el mismo movimiento. Honestidad emocional sin filtro, valentía para los conflictos y una recuperación rápida que pocas Lunas igualan. Su reto: la impulsividad reactiva.',
+    category: 'Astrología',
+    date: '2026-07-18',
+  },
+  {
     slug: 'venus-en-piscis',
     title: 'Venus en Piscis en la carta natal: el amor como devoción y fusión',
     excerpt: 'Venus en Piscis está en exaltación — la posición más espiritual y devota de Venus en el zodiaco. Ama sin reservas, con una empatía que pocas Venus igualan, y cuya sombra es la idealización que ciega ante la realidad del otro. Famosos verificados: Kurt Cobain, Drew Barrymore, Jon Bon Jovi.',

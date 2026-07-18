@@ -16,6 +16,14 @@ const STATIC_PAGES: { url: string; lastMod: string | Date; priority: number; cha
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'luna-en-acuario',                           lastMod: '2026-07-18' },
+  { slug: 'luna-en-libra',                             lastMod: '2026-07-18' },
+  { slug: 'luna-en-virgo',                             lastMod: '2026-07-18' },
+  { slug: 'luna-en-leo',                               lastMod: '2026-07-18' },
+  { slug: 'luna-en-cancer',                            lastMod: '2026-07-18' },
+  { slug: 'luna-en-geminis',                           lastMod: '2026-07-18' },
+  { slug: 'luna-en-tauro',                             lastMod: '2026-07-18' },
+  { slug: 'luna-en-aries',                             lastMod: '2026-07-18' },
   { slug: 'venus-en-piscis',                            lastMod: '2026-07-17' },
   { slug: 'venus-en-acuario',                          lastMod: '2026-07-17' },
   { slug: 'venus-en-sagitario',                        lastMod: '2026-07-17' },
