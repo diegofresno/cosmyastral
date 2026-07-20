@@ -14,6 +14,20 @@ export const metadata: Metadata = {
 
 export const POSTS = [
   {
+    slug: 'luna-llena-agosto-2026',
+    title: 'Luna llena y eclipse lunar de agosto 2026 en Piscis',
+    excerpt: 'El 28 de agosto, la Luna llena en Piscis coincide con un eclipse lunar parcial. El eje Virgo-Piscis en su tensión máxima del año: análisis frente a intuición, servicio frente a disolución. Más intenso que una luna llena ordinaria.',
+    category: 'Ciclos lunares',
+    date: '2026-07-20',
+  },
+  {
+    slug: 'eclipse-solar-agosto-2026',
+    title: 'Eclipse solar de agosto 2026 en Leo: reinicio de la autoexpresión',
+    excerpt: 'El 12 de agosto, la luna nueva en Leo coincide con un eclipse solar. El Sol en su domicilio, eclipsado: un reinicio en la identidad creativa, el corazón y todo lo que necesitas expresar. El ciclo que abre dura hasta febrero 2027.',
+    category: 'Ciclos lunares',
+    date: '2026-07-20',
+  },
+  {
     slug: 'luna-en-acuario',
     title: 'Luna en Acuario en la carta natal: independencia emocional y amor universal',
     excerpt: 'La Luna en Acuario necesita libertad emocional para sentirse bien. Empatía hacia la humanidad, distancia en lo íntimo y una forma de querer que pocas posiciones lunares igualan. Con Princess Diana y Marilyn Monroe como ejemplos documentados.',

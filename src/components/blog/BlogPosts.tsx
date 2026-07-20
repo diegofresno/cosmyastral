@@ -51,6 +51,8 @@ const HERO_IMAGES: Record<string, string> = {
   'luna-en-virgo':                           '/blog/blog-luna-virgo.png',
   'luna-en-libra':                           '/blog/blog-luna-libra.png',
   'luna-en-acuario':                         '/blog/blog-luna-acuario.png',
+  'luna-llena-agosto-2026':                  '/blog/blog-luna-llena-agosto-2026.png',
+  'eclipse-solar-agosto-2026':               '/blog/blog-eclipse-solar-agosto-2026.png',
 };
 
 function PostImage({ slug, title, size = 'grid' }: { slug: string; title: string; size?: 'featured' | 'grid' }) {

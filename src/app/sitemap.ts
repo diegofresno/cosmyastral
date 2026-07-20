@@ -16,6 +16,8 @@ const STATIC_PAGES: { url: string; lastMod: string | Date; priority: number; cha
 ];
 
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
+  { slug: 'luna-llena-agosto-2026',                    lastMod: '2026-07-20' },
+  { slug: 'eclipse-solar-agosto-2026',                 lastMod: '2026-07-20' },
   { slug: 'luna-en-acuario',                           lastMod: '2026-07-18' },
   { slug: 'luna-en-libra',                             lastMod: '2026-07-18' },
   { slug: 'luna-en-virgo',                             lastMod: '2026-07-18' },
