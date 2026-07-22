@@ -18,6 +18,7 @@ const STATIC_PAGES: { url: string; lastMod: string | Date; priority: number; cha
 const BLOG_POSTS: { slug: string; lastMod: string }[] = [
   { slug: 'luna-llena-agosto-2026',                    lastMod: '2026-07-20' },
   { slug: 'eclipse-solar-agosto-2026',                 lastMod: '2026-07-20' },
+  { slug: 'luna-llena-septiembre-2026',                lastMod: '2026-07-22' },
   { slug: 'ascendente-en-aries',                       lastMod: '2026-07-20' },
   { slug: 'ascendente-en-tauro',                       lastMod: '2026-07-20' },
   { slug: 'ascendente-en-geminis',                     lastMod: '2026-07-20' },

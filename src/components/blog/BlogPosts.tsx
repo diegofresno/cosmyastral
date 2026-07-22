@@ -53,6 +53,7 @@ const HERO_IMAGES: Record<string, string> = {
   'luna-en-acuario':                         '/blog/blog-luna-acuario.png',
   'luna-llena-agosto-2026':                  '/blog/blog-luna-llena-agosto-2026.png',
   'eclipse-solar-agosto-2026':               '/blog/blog-eclipse-solar-agosto-2026.png',
+  'luna-llena-septiembre-2026':              '/blog/blog-luna-llena-septiembre-2026.png',
   'ascendente-en-aries':                     '/blog/blog-ascendente-aries.png',
   'ascendente-en-tauro':                     '/blog/blog-ascendente-tauro.png',
   'ascendente-en-geminis':                   '/blog/blog-ascendente-geminis.png',

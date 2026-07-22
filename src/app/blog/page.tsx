@@ -28,6 +28,13 @@ export const POSTS = [
     date: '2026-07-20',
   },
   {
+    slug: 'luna-llena-septiembre-2026',
+    title: 'Luna llena de septiembre 2026 en Aries: la Luna de la Cosecha',
+    excerpt: 'El 26 de septiembre, la Luna llena en Aries cierra el ciclo que empezó en la luna nueva de marzo. El eje Aries-Libra en su punto de mayor tensión del año: autonomía frente a relación. Es la Luna de la Cosecha, la más luminosa del otoño.',
+    category: 'Ciclos lunares',
+    date: '2026-07-22',
+  },
+  {
     slug: 'ascendente-en-aries',
     title: 'Ascendente en Aries: la energía que llega antes que las palabras',
     excerpt: 'El Ascendente en Aries proyecta presencia directa e impulso inmediato. Marte como regente, Capricornio en el Mediocielo y Libra en el Descendente. Lo que el mundo percibe antes de que digas nada.',
