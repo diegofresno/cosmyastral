@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: '¿Sirve si vivo en LATAM?',
-    a: 'Sí. Calculamos correctamente cualquier ciudad del mundo con su zona horaria histórica. Tenemos precios adaptados para Argentina, México, Colombia, Chile y resto de LATAM — un 50% más bajos que España.',
+    a: 'Sí. Calculamos correctamente cualquier ciudad del mundo con su zona horaria histórica. Tenemos precios adaptados para Argentina, México, Colombia, Chile y resto de LATAM, un 50% más bajos que España.',
   },
   {
     q: '¿Y si no me convence?',
@@ -78,7 +78,7 @@ export default function HomePage() {
           <div className="hero__meta">
             <div>
               <SunSvg />
-              <span>Swiss Ephemeris — precisión de segundos de arco</span>
+              <span>Swiss Ephemeris: precisión de segundos de arco</span>
             </div>
             <div>
               <MoonSvg />
@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             <div>
               <StarSvg />
-              <span>52 — 140 páginas de lectura personalizada</span>
+              <span>52: 140 páginas de lectura personalizada</span>
             </div>
           </div>
         </div>
@@ -318,28 +318,28 @@ export default function HomePage() {
               Lo leí entero del tirón. Me reconocí en partes que llevaba años sin saber poner
               en palabras. La parte del Quirón en Géminis me hizo llorar.
             </p>
-            <footer>— Ana, 34 · Madrid</footer>
+            <footer>, Ana, 34 · Madrid</footer>
           </blockquote>
           <blockquote className="quote">
             <p>
               Llevo veinte años leyendo libros de astrología y esto es lo más fino que he leído
               sobre mí misma en mi vida. Recomendado a mis tres hermanas.
             </p>
-            <footer>— Verónica, 51 · Buenos Aires</footer>
+            <footer>, Verónica, 51 · Buenos Aires</footer>
           </blockquote>
           <blockquote className="quote">
             <p>
               Esperaba el típico horóscopo y me llegó un libro. La parte de numerología
               pitagórica explicada con mi nombre completo es brutal.
             </p>
-            <footer>— Daniel, 28 · Ciudad de México</footer>
+            <footer>, Daniel, 28 · Ciudad de México</footer>
           </blockquote>
           <blockquote className="quote">
             <p>
               No creía nada en estas cosas. Mi pareja me lo regaló. Me ha cambiado
               conversaciones enteras con mi madre.
             </p>
-            <footer>— Marta, 42 · Barcelona</footer>
+            <footer>, Marta, 42 · Barcelona</footer>
           </blockquote>
         </div>
       </section>

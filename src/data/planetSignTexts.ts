@@ -1,4 +1,4 @@
-// 120 textos cortos planeta × signo — teaser para contenido bloqueado
+// 120 textos cortos planeta × signo: teaser para contenido bloqueado
 // Generados 2026-07-08. Cada texto: 2-3 frases, ~60-80 palabras.
 
 export type PlanetKey =

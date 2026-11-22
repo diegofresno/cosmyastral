@@ -7,7 +7,7 @@ import BirthForm from '@/components/calculator/BirthForm';
 const SITE = 'https://cosmyastral.com';
 
 export const metadata: Metadata = {
-  title: 'Calculadora de Carta Natal Gratis — Cosmyastral',
+  title: 'Calculadora de Carta Natal Gratis: Cosmyastral',
   description:
     'Calcula tu carta natal gratis con Swiss Ephemeris: posiciones planetarias exactas, casas astrológicas, Ascendente y aspectos. Sin registro. España y LATAM.',
   alternates: { canonical: '/carta-natal/' },

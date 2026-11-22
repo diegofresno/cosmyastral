@@ -11,7 +11,7 @@ const SITE = 'https://cosmyastral.com';
 const LATAM_COUNTRIES = new Set(['AR','MX','CO','CL','PE','VE','BO','EC','PY','UY','CR','GT','HN','SV','NI','PA','DO','CU','PR']);
 
 export const metadata: Metadata = {
-  title: 'Estudios Personalizados de Astrología y Numerología — Cosmyastral',
+  title: 'Estudios Personalizados de Astrología y Numerología: Cosmyastral',
   description:
     'Carta natal interpretada desde 29 €, estudio numerológico desde 19 €, pack completo desde 39 €. Interpretación narrativa personalizada en PDF. Swiss Ephemeris, 7 días de garantía.',
   alternates: { canonical: '/precios/' },
@@ -131,11 +131,11 @@ const FAQS = [
   },
   {
     q: '¿Necesito saber mi hora de nacimiento?',
-    a: 'Para la carta natal sí — la hora es fundamental para calcular el Ascendente y las casas astrológicas. Te recomendamos buscarla en tu partida de nacimiento o preguntar a familiares. Para el estudio numerológico solo necesitamos tu nombre completo y fecha de nacimiento.',
+    a: 'Para la carta natal sí: la hora es fundamental para calcular el Ascendente y las casas astrológicas. Te recomendamos buscarla en tu partida de nacimiento o preguntar a familiares. Para el estudio numerológico solo necesitamos tu nombre completo y fecha de nacimiento.',
   },
   {
     q: '¿Cuál es la diferencia entre carta natal y numerología?',
-    a: 'La carta natal es astrológica: trabaja con la posición exacta de los planetas en el momento de tu nacimiento. La numerología es vibracional: trabaja con el valor numérico de tu nombre y fecha de nacimiento. Son sistemas distintos que se complementan — por eso el pack incluye un diálogo entre ambas disciplinas.',
+    a: 'La carta natal es astrológica: trabaja con la posición exacta de los planetas en el momento de tu nacimiento. La numerología es vibracional: trabaja con el valor numérico de tu nombre y fecha de nacimiento. Son sistemas distintos que se complementan, por eso el pack incluye un diálogo entre ambas disciplinas.',
   },
   {
     q: '¿Los precios son los mismos para todos los países?',

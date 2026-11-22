@@ -11,12 +11,12 @@ const SITE = 'https://cosmyastral.com';
 const LATAM = new Set(['AR','MX','CO','CL','PE','VE','BO','EC','PY','UY','CR','GT','HN','SV','NI','PA','DO','CU','PR']);
 
 export const metadata: Metadata = {
-  title: 'Carta Natal Interpretada — Estudio Personalizado en PDF',
+  title: 'Carta Natal Interpretada: Estudio Personalizado en PDF',
   description:
     'Tu carta natal interpretada en profundidad: Sol, Luna, Ascendente, planetas, casas y Quirón. Más de 10.000 palabras de interpretación narrativa. PDF personalizado. Entrega en 24-48 horas.',
   alternates: { canonical: '/carta-natal-interpretada/' },
   openGraph: {
-    title: 'Carta Natal Interpretada — Cosmyastral',
+    title: 'Carta Natal Interpretada: Cosmyastral',
     description: 'Más de 10.000 palabras de interpretación narrativa personalizada. Cálculo con Swiss Ephemeris. PDF entregado en 24-48 horas.',
     images: [{ url: `${SITE}/blog/blog-carta-natal.png`, width: 1200, height: 630 }],
   },
@@ -69,7 +69,7 @@ const SECTIONS = [
   { glyph: '☉', title: 'Big Three: Sol, Luna, Ascendente', desc: 'Tu esencia, tu mundo emocional y la máscara que presentas al mundo. Los tres pilares de tu carta y cómo se relacionan entre sí.' },
   { glyph: '☿', title: 'Planetas personales', desc: 'Mercurio (comunicación y mente), Venus (afectos y valores), Marte (acción y deseo). Cómo piensas, cómo amas, cómo actúas.' },
   { glyph: '♃', title: 'Planetas sociales y transpersonales', desc: 'Júpiter, Saturno, Urano, Neptuno y Plutón. Tus patrones generacionales, tus mayores retos y tu potencial de transformación.' },
-  { glyph: '⌂', title: 'Casas astrológicas', desc: 'Las 12 áreas de la vida y qué planetas las habitan. Trabajo, amor, familia, dinero, propósito — cada casa tiene algo que decirte.' },
+  { glyph: '⌂', title: 'Casas astrológicas', desc: 'Las 12 áreas de la vida y qué planetas las habitan. Trabajo, amor, familia, dinero, propósito, cada casa tiene algo que decirte.' },
   { glyph: '⚷', title: 'Quirón y Nodos lunares', desc: 'Tu herida sanadora y tu eje evolutivo. Qué viniste a aprender y qué patrones del pasado estás aquí para trascender.' },
   { glyph: '✦', title: 'Aspectos clave y síntesis final', desc: 'Las configuraciones más importantes de tu carta y una síntesis integradora que conecta todos los elementos en una lectura coherente.' },
 ];

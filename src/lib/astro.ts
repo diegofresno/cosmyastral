@@ -1,5 +1,5 @@
-// Astronomical calculations — Jean Meeus simplified formulas
-// Accuracy: Sun ~0.01°, Moon ~1°, Ascendant ~0.2° — sufficient for sign determination (30° per sign)
+// Astronomical calculations: Jean Meeus simplified formulas
+// Accuracy: Sun ~0.01°, Moon ~1°, Ascendant ~0.2°, sufficient for sign determination (30° per sign)
 
 export type ZodiacSign =
   | 'Aries' | 'Tauro' | 'Géminis' | 'Cáncer' | 'Leo' | 'Virgo'

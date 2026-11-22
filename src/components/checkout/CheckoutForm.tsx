@@ -221,7 +221,7 @@ export default function CheckoutForm({ producto, region }: { producto: ProductId
                 )}
               </Field>
 
-              <Field label="Lugar de nacimiento" hint="Ciudad donde naciste — escribe y espera la confirmación">
+              <Field label="Lugar de nacimiento" hint="Ciudad donde naciste: escribe y espera la confirmación">
                 <input
                   type="text"
                   required

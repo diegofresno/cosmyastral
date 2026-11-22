@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Política de privacidad — Cosmyastral',
+  title: 'Política de privacidad: Cosmyastral',
   description: 'Política de privacidad y protección de datos de Cosmyastral.',
   alternates: { canonical: '/privacidad/' },
   robots: { index: false, follow: false },

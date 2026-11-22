@@ -7,7 +7,7 @@ import BirthForm from '@/components/calculator/BirthForm';
 const SITE = 'https://cosmyastral.com';
 
 export const metadata: Metadata = {
-  title: 'Calculadora de Numerología Gratis — Cosmyastral',
+  title: 'Calculadora de Numerología Gratis: Cosmyastral',
   description:
     'Calcula tu numerología pitagórica: Camino de Vida, número de Expresión, Alma, Personalidad y Destino. Gratis, sin registro. España y LATAM.',
   alternates: { canonical: '/numerologia/' },

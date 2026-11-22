@@ -7,9 +7,9 @@ import BirthForm from '@/components/calculator/BirthForm';
 const SITE = 'https://cosmyastral.com';
 
 export const metadata: Metadata = {
-  title: 'Calcular Ascendente Gratis — Cosmyastral',
+  title: 'Calcular Ascendente Gratis: Cosmyastral',
   description:
-    'Calcula tu signo ascendente gratis. Solo necesitas fecha, hora exacta y ciudad de nacimiento. El ascendente cambia cada dos horas — descubre el tuyo.',
+    'Calcula tu signo ascendente gratis. Solo necesitas fecha, hora exacta y ciudad de nacimiento. El ascendente cambia cada dos horas, descubre el tuyo.',
   alternates: { canonical: '/ascendente/' },
 };
 

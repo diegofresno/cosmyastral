@@ -44,7 +44,7 @@ async function sendOrderEmail(session: Stripe.Checkout.Session) {
 
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:560px;margin:0 auto;padding:24px">
-      <h2 style="color:#2a1c10;margin-bottom:24px">Nuevo pedido — Cosmyastral</h2>
+      <h2 style="color:#2a1c10;margin-bottom:24px">Nuevo pedido: Cosmyastral</h2>
       <table style="width:100%;border-collapse:collapse">
         ${rows.map(([k, v]) => `
           <tr>
@@ -61,7 +61,7 @@ async function sendOrderEmail(session: Stripe.Checkout.Session) {
   await resend.emails.send({
     from:    'onboarding@resend.dev',
     to,
-    subject: `Nuevo pedido — ${product} (${amount} ${currency})`,
+    subject: `Nuevo pedido: ${product} (${amount} ${currency})`,
     html,
   });
 }

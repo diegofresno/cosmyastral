@@ -252,7 +252,7 @@ export default function BirthForm({ type }: Props) {
             signal: AbortSignal.timeout(12000),
           });
           if (kRes.ok) kerykeion = await kRes.json();
-        } catch { /* kerykeion no disponible — usa fallback JS */ }
+        } catch { /* kerykeion no disponible: usa fallback JS */ }
       }
 
       // ── JS fallback (Big Three) ───────────────────────────────────────────────
@@ -685,9 +685,9 @@ function NatalPanel({ result, onReset }: { result: NatalRes; onReset: () => void
         {/* ── Big Three ── */}
         <SectionLabel>Tu Big Three · desbloqueado</SectionLabel>
 
-        <PlanetRow glyph="☉" label="Sol — tu esencia"         pos={result.sun}       descMap={SUN_DESC}  />
-        <PlanetRow glyph="☽" label="Luna — tu mundo interior" pos={result.moon}      descMap={MOON_DESC} />
-        <PlanetRow glyph="↑" label="Ascendente — tu máscara"  pos={result.ascendant} descMap={ASC_DESC}  />
+        <PlanetRow glyph="☉" label="Sol: tu esencia"         pos={result.sun}       descMap={SUN_DESC}  />
+        <PlanetRow glyph="☽" label="Luna: tu mundo interior" pos={result.moon}      descMap={MOON_DESC} />
+        <PlanetRow glyph="↑" label="Ascendente: tu máscara"  pos={result.ascendant} descMap={ASC_DESC}  />
 
         {/* Synthesis */}
         <div style={{ background: 'var(--bg-warm)', borderRadius: '6px', padding: '22px', marginBottom: '8px' }}>
@@ -793,7 +793,7 @@ function AscPanel({ result, onReset }: { result: AscRes; onReset: () => void }) 
             ¿Qué significa el Ascendente?
           </p>
           <p style={{ fontFamily: 'var(--font-garamond)', fontSize: '1rem', color: 'var(--ink-soft)', lineHeight: 1.7, margin: 0 }}>
-            El Ascendente es el signo que estaba saliendo por el horizonte este en el momento exacto de tu nacimiento. Es tu máscara social — la primera impresión que das, el cuerpo que habitas, la manera en que te aproximas al mundo antes de que nadie te conozca de verdad. Mientras el Sol describe tu esencia y la Luna tu mundo emocional, el Ascendente es la envoltura visible que ambos usan para relacionarse con el exterior.
+            El Ascendente es el signo que estaba saliendo por el horizonte este en el momento exacto de tu nacimiento. Es tu máscara social, la primera impresión que das, el cuerpo que habitas, la manera en que te aproximas al mundo antes de que nadie te conozca de verdad. Mientras el Sol describe tu esencia y la Luna tu mundo emocional, el Ascendente es la envoltura visible que ambos usan para relacionarse con el exterior.
           </p>
         </div>
 

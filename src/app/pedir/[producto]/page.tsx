@@ -9,15 +9,15 @@ const LATAM = new Set(['AR','MX','CO','CL','PE','VE','BO','EC','PY','UY','CR','G
 
 const META: Record<ProductId, { title: string; desc: string }> = {
   'numerologia': {
-    title: 'Pedir estudio numerológico — Cosmyastral',
+    title: 'Pedir estudio numerológico: Cosmyastral',
     desc: 'Rellena tus datos de nacimiento y obtén tu estudio numerológico completo en PDF.',
   },
   'carta-natal': {
-    title: 'Pedir carta natal interpretada — Cosmyastral',
+    title: 'Pedir carta natal interpretada: Cosmyastral',
     desc: 'Rellena tus datos de nacimiento y obtén tu carta natal interpretada en PDF.',
   },
   'pack': {
-    title: 'Pedir pack completo — Cosmyastral',
+    title: 'Pedir pack completo: Cosmyastral',
     desc: 'Rellena tus datos de nacimiento y obtén el pack carta natal + numerología en PDF.',
   },
 };
