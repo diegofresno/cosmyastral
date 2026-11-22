@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-// Module-level cache — survives across requests within the same server process.
+// Module-level cache: survives across requests within the same server process.
 // Prevents Nominatim from returning slightly different coordinates on repeated calls,
 // which would cause the ascendant to flip sign near cusps.
 type GeoResult = { lat: number; lng: number; timezone: string; shortName: string; displayName: string };
@@ -80,7 +80,7 @@ export async function GET(request: Request) {
   const q = searchParams.get('q')?.trim();
   if (!q) return NextResponse.json({ error: 'Parámetro q requerido' }, { status: 400 });
 
-  // Return cached result if available — prevents any Nominatim variance affecting the ascendant
+  // Return cached result if available: prevents any Nominatim variance affecting the ascendant
   const cacheKey = q.toLowerCase();
   const cached = geoCache.get(cacheKey);
   if (cached) return NextResponse.json(cached);

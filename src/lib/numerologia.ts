@@ -1,4 +1,4 @@
-// Pythagorean numerology — classic Western system
+// Pythagorean numerology: classic Western system
 // All functions take year/month/day as numbers to avoid timezone ambiguity
 
 const TABLE: Record<string, number> = {

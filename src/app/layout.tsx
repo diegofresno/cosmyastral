@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
     default: "Cosmyastral · Carta natal y numerología narradas con cuidado",
-    template: "%s — Cosmyastral",
+    template: "%s: Cosmyastral",
   },
   description:
     "Calculadora de carta natal gratuita y estudios personalizados de astrología y numerología. Cálculo con Swiss Ephemeris, interpretación narrativa con revisión humana.",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: `${SITE}/blog/blog-carta-natal.png`,
         width: 1200,
         height: 630,
-        alt: "Cosmyastral — Carta natal y numerología",
+        alt: "Cosmyastral: Carta natal y numerología",
       },
     ],
   },
